@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>泰拉學校｜工作分工與住宿分配總整合</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #667085;
+      --line: #d9dee7;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --accent: #22685f;
+      --accent-soft: #edf5f2;
+      --warn: #fff4e5;
+      --warn-line: #d37b2c;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 980px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 248, 250, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .top-nav .wrap {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    a.pill,
+    a.source-link {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 13px;
+      font-size: 14px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    a.pill.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    main {
+      padding: 22px 0 54px;
+    }
+
+    section {
+      scroll-margin-top: 74px;
+      margin: 0 0 22px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .directory {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .directory-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 15px;
+    }
+
+    .directory-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 17px;
+    }
+
+    .directory-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .directory-card li {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    .directory-card a {
+      color: var(--ink);
+      text-decoration-color: #a7b3c2;
+      text-underline-offset: 3px;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 12px 0 0;
+    }
+
+    .quick-grid a {
+      display: block;
+      min-height: 70px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--accent-soft);
+      padding: 11px 12px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .quick-grid b {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--accent);
+    }
+
+    .quick-grid span,
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .frame-head {
+      display: flex;
+      gap: 10px;
+      align-items: start;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .frame-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .source-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .source-actions a {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 7px 11px;
+      font-size: 13px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: min(860px, calc(100vh - 142px));
+      min-height: 680px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .note {
+      border-left: 5px solid var(--warn-line);
+      background: var(--warn);
+      padding: 12px 14px;
+      margin: 12px 0 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .directory,
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .frame-head {
+        display: block;
+      }
+
+      .source-actions {
+        justify-content: flex-start;
+        margin-top: 10px;
+      }
+
+      iframe {
+        height: 720px;
+        min-height: 560px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>工作分工與住宿分配總整合</h1>
+      <p class="subtitle">本頁將五天工作人員分工、住宿分配與四組分組結果放在同一份會議用 HTML 中。下方目錄可快速跳到各討論區；各區內容仍讀取最新原檔，後續調整原檔會同步反映。</p>
+    </div>
+  </header>
+
+  <nav class="top-nav" aria-label="頁面快速導覽">
+    <div class="wrap">
+      <a class="pill primary" href="#toc">目錄</a>
+      <a class="pill" href="#staff">工作人員分工</a>
+      <a class="pill" href="#lodging">住宿分配</a>
+      <a class="pill" href="#groups">四組分組</a>
+      <a class="pill" href="#source">原檔連結</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="toc" class="panel">
+      <h2>目錄</h2>
+      <p class="muted">建議會議討論順序：先看共通角色與每日分工，再對照住宿分配，最後回到四組分組檢查助教、隊輔與離隊人員分散情形。</p>
+      <div class="directory">
+        <div class="directory-card">
+          <strong>一、工作人員分工總表</strong>
+          <ul>
+            <li><a href="#staff">五天分工總覽</a></li>
+            <li>Day 1：報到、論壇、分組公布、移動破冰、住宿收尾</li>
+            <li>Day 2：原生園靜坐、阿聰自然田、桌研、跨文化之夜</li>
+            <li>Day 3：水月農莊、慢島生活、素材整理、春風住宿</li>
+            <li>Day 4：深溝調查、佛光移動、日籍/政大學生返台、解方發想</li>
+            <li>Day 5：植樹、成果發表、結業典禮、返台</li>
+            <li>交通與行前準備、共通角色規則</li>
+          </ul>
+        </div>
+        <div class="directory-card">
+          <strong>二、住宿分配</strong>
+          <ul>
+            <li><a href="#lodging">新版 34 人住宿分配</a></li>
+            <li>容量與原則：星光、阿聰、春風、藏聚、佛光</li>
+            <li>Day 1：6/28 星光碧后 + 阿聰自然田</li>
+            <li>Day 2：6/29 星光碧后 + 阿聰自然田</li>
+            <li>Day 3：6/30 春風草堂 + 藏聚民宿</li>
+            <li>Day 4：7/1 佛光大學</li>
+          </ul>
+        </div>
+        <div class="directory-card">
+          <strong>三、分組與檢查</strong>
+          <ul>
+            <li><a href="#groups">四組分組方案</a></li>
+            <li>不加入分組：賴郁雯、徐柏峯、江宜汾、上杉勇司</li>
+            <li>日本學生與政大兩位學生分散至四組</li>
+            <li>每組配置助教與隊輔</li>
+            <li>檢查 7/1 離隊後各組仍可運作</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="quick-grid" aria-label="快速討論入口">
+        <a href="#staff"><b>工作分工</b><span>每日時段、角色任務、待辦事項</span></a>
+        <a href="#lodging"><b>住宿分配</b><span>房型、室友、補充住宿點</span></a>
+        <a href="#groups"><b>四組分組</b><span>組員、助教、隊輔、離隊平衡</span></a>
+        <a href="#source"><b>原檔連結</b><span>單獨開啟三份原始 HTML</span></a>
+      </div>
+    </section>
+
+    <section id="staff" class="panel">
+      <div class="frame-head">
+        <div>
+          <h2>一、五天工作人員分工總表</h2>
+          <p>包含隊輔、活動組、導師、助教、行政財務在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p>
+        </div>
+        <div class="source-actions">
+          <a href="五天工作人員分工總表.html" target="_blank" rel="noopener">開啟工作分工原檔</a>
+        </div>
+      </div>
+      <iframe src="五天工作人員分工總表.html" title="五天工作人員分工總表"></iframe>
+      <div class="note">討論提醒：工作分工原檔內仍有自己的 Day 1-5、交通/行前、共通規則切換列，可在此框內直接切換。</div>
+    </section>
+
+    <section id="lodging" class="panel">
+      <div class="frame-head">
+        <div>
+          <h2>二、新版 34 人住宿分配</h2>
+          <p>目前規則：學員集中於主要住宿點；星光/春風剩餘房間優先安排隊輔；阿聰自然田為 6 間雙人房；藏聚民宿作為第三晚補充住宿點。</p>
+        </div>
+        <div class="source-actions">
+          <a href="住宿分配_新版34人.html" target="_blank" rel="noopener">開啟住宿分配原檔</a>
+        </div>
+      </div>
+      <iframe src="住宿分配_新版34人.html" title="新版 34 人住宿分配"></iframe>
+    </section>
+
+    <section id="groups" class="panel">
+      <div class="frame-head">
+        <div>
+          <h2>三、四組分組方案</h2>
+          <p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，並讓日本學生與政大兩位學生分散到四組。</p>
+        </div>
+        <div class="source-actions">
+          <a href="分組結果_四組方案.html" target="_blank" rel="noopener">開啟分組原檔</a>
+        </div>
+      </div>
+      <iframe src="分組結果_四組方案.html" title="四組分組結果"></iframe>
+    </section>
+
+    <section id="source" class="panel">
+      <h2>原檔連結</h2>
+      <p class="muted">若需要單獨投影或列印，可直接開啟各原始檔案。</p>
+      <div class="quick-grid">
+        <a href="五天工作人員分工總表.html" target="_blank" rel="noopener"><b>五天工作人員分工總表</b><span>每日工作分工與待辦</span></a>
+        <a href="住宿分配_新版34人.html" target="_blank" rel="noopener"><b>住宿分配_新版34人</b><span>四晚房間與住宿點</span></a>
+        <a href="分組結果_四組方案.html" target="_blank" rel="noopener"><b>分組結果_四組方案</b><span>四組名單與配置</span></a>
+        <a href="#toc"><b>回到目錄</b><span>返回本頁最上方</span></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

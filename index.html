@@ -31,10 +31,7 @@
       letter-spacing: 0;
     }
 
-    .wrap {
-      width: min(1240px, calc(100% - 36px));
-      margin: 0 auto;
-    }
+    .wrap { width: min(1240px, calc(100% - 36px)); margin: 0 auto; }
 
     header {
       background: #efe5d6;
@@ -50,12 +47,7 @@
       font-weight: 800;
     }
 
-    h2 {
-      margin: 0 0 10px;
-      color: var(--accent-dark);
-      font-size: 26px;
-      line-height: 1.25;
-    }
+    h2 { margin: 0 0 10px; color: var(--accent-dark); font-size: 26px; line-height: 1.25; }
 
     .terra-eyebrow {
       margin: 0 0 9px;
@@ -66,12 +58,7 @@
       text-transform: uppercase;
     }
 
-    .subtitle {
-      margin: 12px 0 0;
-      max-width: 860px;
-      color: var(--muted);
-      font-size: 17px;
-    }
+    .subtitle { margin: 12px 0 0; max-width: 860px; color: var(--muted); font-size: 17px; }
 
     .top-nav {
       position: sticky;
@@ -82,12 +69,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .top-nav .wrap {
-      display: flex;
-      gap: 9px;
-      overflow-x: auto;
-      padding: 11px 0;
-    }
+    .top-nav .wrap { display: flex; gap: 9px; overflow-x: auto; padding: 11px 0; }
 
     a.pill {
       flex: 0 0 auto;
@@ -103,18 +85,10 @@
       box-shadow: 0 4px 14px rgba(56, 49, 36, .04);
     }
 
-    a.pill.primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #fffdf7;
-    }
+    a.pill.primary { background: var(--accent); border-color: var(--accent); color: #fffdf7; }
 
     main { padding: 24px 0 56px; }
-
-    section {
-      scroll-margin-top: 78px;
-      margin: 0 0 24px;
-    }
+    section { scroll-margin-top: 78px; margin: 0 0 24px; }
 
     .panel {
       background: rgba(255, 253, 247, .94);
@@ -124,12 +98,7 @@
       box-shadow: 0 14px 38px rgba(56, 49, 36, .07);
     }
 
-    .directory {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr 1fr;
-      gap: 14px;
-      margin-top: 16px;
-    }
+    .directory { display: grid; grid-template-columns: 1.05fr 1fr 1fr; gap: 14px; margin-top: 16px; }
 
     .directory-card {
       border: 1px solid var(--line);
@@ -138,23 +107,12 @@
       padding: 16px;
     }
 
-    .directory-card strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--accent-dark);
-      font-size: 17px;
-    }
-
+    .directory-card strong { display: block; margin-bottom: 8px; color: var(--accent-dark); font-size: 17px; }
     .directory-card ul { margin: 0; padding-left: 20px; }
     .directory-card li { margin: 6px 0; color: var(--muted); }
     .directory-card a { color: var(--ink); text-decoration-color: #bda98e; text-underline-offset: 3px; }
 
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin: 14px 0 0;
-    }
+    .quick-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 14px 0 0; }
 
     .quick-grid a {
       display: block;
@@ -170,14 +128,7 @@
     .quick-grid b { display: block; margin-bottom: 3px; color: var(--accent-dark); }
     .quick-grid span, .muted { color: var(--muted); font-size: 14px; }
 
-    .frame-head {
-      display: flex;
-      gap: 10px;
-      align-items: start;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
+    .frame-head { display: flex; gap: 10px; align-items: start; justify-content: space-between; margin-bottom: 10px; }
     .frame-head p { margin: 0; color: var(--muted); font-size: 14px; }
 
     iframe {
@@ -188,15 +139,6 @@
       border: 1px solid var(--line);
       border-radius: 12px;
       background: #fffdf7;
-    }
-
-    .note {
-      border-left: 5px solid var(--earth);
-      background: var(--earth-soft);
-      padding: 12px 14px;
-      margin: 12px 0 0;
-      font-size: 14px;
-      border-radius: 0 10px 10px 0;
     }
 
     @media (max-width: 980px) {
@@ -243,7 +185,7 @@
         <div class="directory-card">
           <strong>二、住宿分配</strong>
           <ul>
-            <li><a href="#lodging">新版 34 人住宿分配</a></li>
+            <li><a href="#lodging">新版 35 人住宿分配</a></li>
             <li>容量與原則：星光、阿聰、春風、藏聚、佛光</li>
             <li>Day 1：6/28 星光碧后 + 阿聰自然田</li>
             <li>Day 2：6/29 星光碧后 + 阿聰自然田</li>
@@ -261,7 +203,6 @@
           </ul>
         </div>
       </div>
-
       <div class="quick-grid" aria-label="快速討論入口">
         <a href="#staff"><b>工作分工</b><span>每日時段、角色任務、待辦事項</span></a>
         <a href="#lodging"><b>住宿分配</b><span>房型、室友、補充住宿點</span></a>
@@ -270,7 +211,7 @@
     </section>
 
     <section id="staff" class="panel">
-      <div class="frame-head"><div><h2>一、五天工作人員分工總表</h2><p>包含隊輔、活動組、導師、助教、行政財務在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p></div></div>
+      <div class="frame-head"><div><h2>一、五天工作人員分工總表</h2><p>包含隊輔、活動組、導師、助教、行政財務、隨隊攝影在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
@@ -342,7 +283,7 @@
 
     .summary {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       gap: 10px;
       margin-top: 22px;
     }
@@ -547,13 +488,14 @@
     &lt;div class=&quot;wrap&quot;&gt;
       &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
       &lt;h1&gt;五日活動工作人員分工總表&lt;/h1&gt;
-      &lt;p class=&quot;subtitle&quot;&gt;依目前討論整理：隊輔負責安全、生活照顧、移動與現場流程；活動組負責破冰、團康與交流活動；導師負責教學或引導單元；助教跟著小組推進設計思考；張沛勻負責行政與財務。&lt;/p&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依目前討論整理：隊輔負責安全、生活照顧、移動與現場流程；活動組負責破冰、團康與交流活動；導師負責教學或引導單元；助教跟著小組推進設計思考；張沛勻負責行政與財務；陳民紋為隨隊攝影工作人員。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;
         &lt;div&gt;&lt;b&gt;隊輔&lt;/b&gt;&lt;span&gt;林宛儒、吳孟龍、林秀芬、李樂昱&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;活動組&lt;/b&gt;&lt;span&gt;林宛儒、林秀芬、吳孟龍&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;導師&lt;/b&gt;&lt;span&gt;徐柏峯、李樂昱、江宜汾&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;助教&lt;/b&gt;&lt;span&gt;陳思穎、林妙怡、吳孟龍、李樂昱&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;行政財務&lt;/b&gt;&lt;span&gt;張沛勻&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;隨隊攝影&lt;/b&gt;&lt;span&gt;陳民紋&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/header&gt;
@@ -1282,6 +1224,11 @@
           &lt;p&gt;張沛勻一人負責行政與財務：每日簽到表、付款、收據、單據、勞報單、交通票據、行前通知、證書、名單與必要文件。&lt;/p&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;隨隊攝影&lt;/strong&gt;
+          &lt;p&gt;&lt;span class=&quot;tag&quot;&gt;陳民紋&lt;/span&gt;&lt;/p&gt;
+          &lt;p&gt;工作人員，不編入分組。負責活動現場影像紀錄、田野與成果發表影像素材；住宿可與助教或隊輔同房。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
           &lt;strong&gt;設計思考場域&lt;/strong&gt;
           &lt;p&gt;農場、職人介紹、體驗、餐食、訪談、講座與素材整理，只要能產生觀察/訪談資料，都視為設計思考場域。&lt;/p&gt;
         &lt;/div&gt;
@@ -1331,13 +1278,13 @@
     </section>
 
     <section id="lodging" class="panel">
-      <div class="frame-head"><div><h2>二、新版 34 人住宿分配</h2><p>學員集中於主要住宿點；星光/春風剩餘房間優先安排隊輔；阿聰自然田為 6 間雙人房。</p></div></div>
+      <div class="frame-head"><div><h2>二、新版 35 人住宿分配</h2><p>新增隨隊攝影陳民紋，安排與隊輔/助教吳孟龍同房；學員仍集中於主要住宿點。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
   &lt;meta charset=&quot;utf-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-  &lt;title&gt;泰拉學校｜住宿分配（新版 34 人）&lt;/title&gt;
+  &lt;title&gt;泰拉學校｜住宿分配（新版 35 人）&lt;/title&gt;
   &lt;style&gt;
     :root {
       --ink: #24352f;
@@ -1495,13 +1442,13 @@
   &lt;header&gt;
     &lt;div class=&quot;wrap&quot;&gt;
       &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
-      &lt;h1&gt;住宿分配（新版 34 人）&lt;/h1&gt;
-      &lt;p class=&quot;subtitle&quot;&gt;依新版名冊與目前規則重排：上杉老師單住；住宿以同性別為主；第一、二晚學生集中住星光碧后，第三晚學生集中住春風草堂；剩餘房間優先安排隊輔，吳孟龍可與男學生同住。阿聰自然田更新為 6 間雙人房。&lt;/p&gt;
+      &lt;h1&gt;住宿分配（新版 35 人）&lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依新版名冊與目前規則重排：新增 35 陳民紋，男，隨隊攝影工作人員，不編組；住宿可與助教或隊輔同房。本版安排陳民紋與吳孟龍同房。上杉老師單住；住宿以同性別為主；第一、二晚學生集中住星光碧后，第三晚學生集中住春風草堂。阿聰自然田更新為 6 間雙人房。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;
-        &lt;div&gt;&lt;b&gt;Day 1&lt;/b&gt;&lt;span&gt;32 人住宿，2 人第二天加入&lt;/span&gt;&lt;/div&gt;
-        &lt;div&gt;&lt;b&gt;Day 2&lt;/b&gt;&lt;span&gt;34 人住宿&lt;/span&gt;&lt;/div&gt;
-        &lt;div&gt;&lt;b&gt;Day 3&lt;/b&gt;&lt;span&gt;34 人住宿，藏聚補位&lt;/span&gt;&lt;/div&gt;
-        &lt;div&gt;&lt;b&gt;Day 4&lt;/b&gt;&lt;span&gt;21 人佛光住宿&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 1&lt;/b&gt;&lt;span&gt;33 人住宿，2 人第二天加入&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 2&lt;/b&gt;&lt;span&gt;35 人住宿&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 3&lt;/b&gt;&lt;span&gt;35 人住宿，藏聚補位&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 4&lt;/b&gt;&lt;span&gt;22 人佛光住宿&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/header&gt;
@@ -1536,17 +1483,17 @@
           &lt;tr&gt;
             &lt;td&gt;藏聚民宿&lt;/td&gt;
             &lt;td&gt;雙人房，數量待確認&lt;/td&gt;
-            &lt;td&gt;第三晚補位使用，建議至少保留 3 間雙人房。&lt;/td&gt;
+            &lt;td&gt;第三晚補位使用，新增隨隊攝影後建議至少保留 4 間雙人房。&lt;/td&gt;
           &lt;/tr&gt;
           &lt;tr&gt;
             &lt;td&gt;佛光大學&lt;/td&gt;
             &lt;td&gt;兩人房&lt;/td&gt;
-            &lt;td&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 21 人住宿；建議 11 間，其中 1 間單住。&lt;/td&gt;
+            &lt;td&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 22 人住宿；建議 11 間兩人房。&lt;/td&gt;
           &lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
       &lt;div class=&quot;note&quot;&gt;
-        &lt;strong&gt;容量提醒：&lt;/strong&gt;第一晚因 11 Yuzuki Igarashi、21 呂珈安第二天才加入，住宿人數為 32 人；第二晚與第三晚為 34 人。第一、二晚學生集中住星光碧后；第三晚學生集中住春風草堂。剩餘房間優先安排隊輔，吳孟龍可與男學生同住。
+        &lt;strong&gt;容量提醒：&lt;/strong&gt;第一晚因 11 Yuzuki Igarashi、21 呂珈安第二天才加入，住宿人數為 33 人；第二晚與第三晚為 35 人。第一、二晚學生集中住星光碧后；第三晚學生集中住春風草堂。35 陳民紋為隨隊攝影工作人員，不編組；住宿安排與隊輔/助教吳孟龍同房。
       &lt;/div&gt;
       &lt;table&gt;
         &lt;thead&gt;
@@ -1561,24 +1508,24 @@
         &lt;tbody&gt;
           &lt;tr&gt;
             &lt;td&gt;Day 1&lt;/td&gt;
-            &lt;td&gt;星光碧后 25 人&lt;/td&gt;
-            &lt;td&gt;阿聰自然田 7 人&lt;/td&gt;
-            &lt;td&gt;阿聰使用 4 / 6 間雙人房&lt;/td&gt;
-            &lt;td&gt;阿聰尚可保留 2 間雙人房；苗怡凡已視為學員並安排於星光，星光剩餘床位優先安排隊輔。&lt;/td&gt;
+            &lt;td&gt;星光碧后 24 人&lt;/td&gt;
+            &lt;td&gt;阿聰自然田 9 人&lt;/td&gt;
+            &lt;td&gt;阿聰使用 5 / 6 間雙人房&lt;/td&gt;
+            &lt;td&gt;阿聰尚可保留 1 間雙人房；苗怡凡已視為學員並安排於星光，陳民紋與吳孟龍同房。&lt;/td&gt;
           &lt;/tr&gt;
           &lt;tr&gt;
             &lt;td&gt;Day 2&lt;/td&gt;
-            &lt;td&gt;星光碧后 25 人&lt;/td&gt;
-            &lt;td&gt;阿聰自然田 9 人&lt;/td&gt;
-            &lt;td&gt;阿聰使用 5 / 6 間雙人房&lt;/td&gt;
-            &lt;td&gt;阿聰尚可保留 1 間雙人房；第二天加入學生與苗怡凡安排於星光，盡量不更動第一晚學員房間。&lt;/td&gt;
+            &lt;td&gt;星光碧后 24 人&lt;/td&gt;
+            &lt;td&gt;阿聰自然田 11 人&lt;/td&gt;
+            &lt;td&gt;阿聰使用 6 / 6 間雙人房&lt;/td&gt;
+            &lt;td&gt;阿聰雙人房全數使用；第二天加入學生與苗怡凡安排於星光，陳民紋與吳孟龍同房。&lt;/td&gt;
           &lt;/tr&gt;
           &lt;tr&gt;
             &lt;td&gt;Day 3&lt;/td&gt;
-            &lt;td&gt;春風草堂 29 人&lt;/td&gt;
-            &lt;td&gt;藏聚民宿 5 人&lt;/td&gt;
-            &lt;td&gt;藏聚使用 3 間雙人房&lt;/td&gt;
-            &lt;td&gt;苗怡凡已視為學員並安排於春風草堂；春風剩餘房間優先安排隊輔與助教。&lt;/td&gt;
+            &lt;td&gt;春風草堂 28 人&lt;/td&gt;
+            &lt;td&gt;藏聚民宿 7 人&lt;/td&gt;
+            &lt;td&gt;藏聚使用 4 間雙人房&lt;/td&gt;
+            &lt;td&gt;苗怡凡已視為學員並安排於春風草堂；陳民紋與吳孟龍安排於藏聚同房。&lt;/td&gt;
           &lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
@@ -1586,7 +1533,7 @@
 
     &lt;section&gt;
       &lt;h2&gt;Day 1｜6/28 星光碧后 + 阿聰自然田&lt;/h2&gt;
-      &lt;p class=&quot;muted&quot;&gt;本晚 32 人住宿；11 Yuzuki Igarashi、21 呂珈安第二天才加入，Day 1 不住宿。&lt;/p&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 33 人住宿；11 Yuzuki Igarashi、21 呂珈安第二天才加入，Day 1 不住宿。35 陳民紋為隨隊攝影工作人員。&lt;/p&gt;
       &lt;table&gt;
         &lt;thead&gt;
           &lt;tr&gt;
@@ -1598,7 +1545,7 @@
         &lt;/thead&gt;
         &lt;tbody&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;小雙人套房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
-          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生優先住八人房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥&lt;/td&gt;&lt;td&gt;男學生集中住八人房；本晚 7 人使用。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;五人套房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実&lt;/td&gt;&lt;td&gt;日本女學生房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;10 篠崎こころ、12 鄧靜脩、14 丁芯蕾、15 楊予喬&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;16 賴沭芸、18 蔡宜津、19 招姍姍、20 王品然&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
@@ -1606,6 +1553,7 @@
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;延續賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：第一晚李樂昱與林秀芬移至阿聰同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;34 吳孟龍、35 陳民紋&lt;/td&gt;&lt;td&gt;陳民紋為隨隊攝影；與隊輔/助教吳孟龍同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
@@ -1613,7 +1561,7 @@
 
     &lt;section&gt;
       &lt;h2&gt;Day 2｜6/29 星光碧后 + 阿聰自然田&lt;/h2&gt;
-      &lt;p class=&quot;muted&quot;&gt;本晚 34 人住宿；11 Yuzuki Igarashi、21 呂珈安加入。&lt;/p&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 35 人住宿；11 Yuzuki Igarashi、21 呂珈安加入；35 陳民紋為隨隊攝影工作人員。&lt;/p&gt;
       &lt;table&gt;
         &lt;thead&gt;
           &lt;tr&gt;
@@ -1625,7 +1573,7 @@
         &lt;/thead&gt;
         &lt;tbody&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;小雙人套房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
-          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生優先住八人房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥&lt;/td&gt;&lt;td&gt;男學生集中住八人房；本晚 7 人使用。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;五人套房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実&lt;/td&gt;&lt;td&gt;日本女學生房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;10 篠崎こころ、12 鄧靜脩、14 丁芯蕾、15 楊予喬&lt;/td&gt;&lt;td&gt;女生房；延續第一晚原房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;16 賴沭芸、18 蔡宜津、19 招姍姍、20 王品然&lt;/td&gt;&lt;td&gt;女生房；延續第一晚原房。&lt;/td&gt;&lt;/tr&gt;
@@ -1634,6 +1582,7 @@
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：林秀芬與李樂昱同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;25 林妙怡、26 陳思穎&lt;/td&gt;&lt;td&gt;女性助教同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;34 吳孟龍、35 陳民紋&lt;/td&gt;&lt;td&gt;陳民紋為隨隊攝影；與隊輔/助教吳孟龍同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
@@ -1641,7 +1590,7 @@
 
     &lt;section&gt;
       &lt;h2&gt;Day 3｜6/30 春風草堂 + 藏聚民宿&lt;/h2&gt;
-      &lt;p class=&quot;muted&quot;&gt;本晚 34 人住宿；春風草堂因上杉老師單住，建議藏聚民宿至少保留 3 間雙人房。&lt;/p&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 35 人住宿；春風草堂因上杉老師單住，建議藏聚民宿至少保留 4 間雙人房。&lt;/p&gt;
       &lt;table&gt;
         &lt;thead&gt;
           &lt;tr&gt;
@@ -1654,7 +1603,7 @@
         &lt;tbody&gt;
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
-          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;17 刁元廷、22 鄭伯弘、23 林宸溥&lt;/td&gt;&lt;td&gt;男學生房；本晚 3 人使用。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;六人房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実、10 篠崎こころ&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;六人房&lt;/td&gt;&lt;td&gt;11 Yuzuki Igarashi、12 鄧靜脩、14 丁芯蕾、15 楊予喬、16 賴沭芸、18 蔡宜津&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;19 招姍姍、20 王品然、21 呂珈安、27 苗怡凡&lt;/td&gt;&lt;td&gt;女生房；苗怡凡視為學員，安排於春風草堂。&lt;/td&gt;&lt;/tr&gt;
@@ -1662,6 +1611,7 @@
           &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;25 林妙怡、26 陳思穎&lt;/td&gt;&lt;td&gt;女性助教同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;延續賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;34 吳孟龍、35 陳民紋&lt;/td&gt;&lt;td&gt;陳民紋為隨隊攝影；與隊輔/助教吳孟龍同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
@@ -1669,7 +1619,7 @@
 
     &lt;section&gt;
       &lt;h2&gt;Day 4｜7/1 佛光大學&lt;/h2&gt;
-      &lt;p class=&quot;muted&quot;&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 21 人住宿。佛光大學皆兩人房，建議 11 間，其中 1 間單住。&lt;/p&gt;
+      &lt;p class=&quot;muted&quot;&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 22 人住宿。佛光大學皆兩人房，建議 11 間。&lt;/p&gt;
       &lt;table&gt;
         &lt;thead&gt;
           &lt;tr&gt;
@@ -1688,22 +1638,22 @@
           &lt;tr&gt;&lt;td&gt;女 7&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：李樂昱與林秀芬同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;女 8&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
           &lt;tr&gt;&lt;td&gt;男 1&lt;/td&gt;&lt;td&gt;17 刁元廷、22 鄭伯弘&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
-          &lt;tr&gt;&lt;td&gt;男 2&lt;/td&gt;&lt;td&gt;23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
-          &lt;tr&gt;&lt;td&gt;男 3&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男生剩奇數，建議徐柏峯單住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;男 2&lt;/td&gt;&lt;td&gt;23 林宸溥、30 徐柏峯&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;男 3&lt;/td&gt;&lt;td&gt;34 吳孟龍、35 陳民紋&lt;/td&gt;&lt;td&gt;陳民紋為隨隊攝影；與隊輔/助教吳孟龍同房。&lt;/td&gt;&lt;/tr&gt;
         &lt;/tbody&gt;
       &lt;/table&gt;
       &lt;div class=&quot;note&quot;&gt;
-        &lt;strong&gt;待確認：&lt;/strong&gt;佛光大學是否可提供 11 間兩人房；若只能提供 10 間，需討論是否接受一間三人或調整性別住宿原則。
+        &lt;strong&gt;待確認：&lt;/strong&gt;佛光大學是否可提供 11 間兩人房。
       &lt;/div&gt;
     &lt;/section&gt;
   &lt;/main&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="新版 34 人住宿分配"></iframe>
+" title="新版 35 人住宿分配"></iframe>
     </section>
 
     <section id="groups" class="panel">
-      <div class="frame-head"><div><h2>三、四組分組方案</h2><p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，並讓日本學生與政大兩位學生分散到四組。</p></div></div>
+      <div class="frame-head"><div><h2>三、四組分組方案</h2><p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，陳民紋為工作人員不編入分組。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
@@ -1909,11 +1859,11 @@
     &lt;div class=&quot;wrap&quot;&gt;
       &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
       &lt;h1&gt;分組結果（四組方案）&lt;/h1&gt;
-      &lt;p class=&quot;subtitle&quot;&gt;依新版 34 人名冊重排。延續先前原則：日本教授不編組；賴郁雯、徐柏峯、江宜汾不加入分組；日本學生與兩位政大學生分散至四組；每組配置助教與隊輔。&lt;/p&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依新版 35 人名冊重排。延續先前原則：日本教授不編組；賴郁雯、徐柏峯、江宜汾不加入分組；隨隊攝影陳民紋為工作人員不編組；日本學生與兩位政大學生分散至四組；每組配置助教與隊輔。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;
-        &lt;div&gt;&lt;b&gt;34 人&lt;/b&gt;&lt;span&gt;新版名冊總人數&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;35 人&lt;/b&gt;&lt;span&gt;新版名冊總人數&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;30 人&lt;/b&gt;&lt;span&gt;進入四組分組&lt;/span&gt;&lt;/div&gt;
-        &lt;div&gt;&lt;b&gt;4 人&lt;/b&gt;&lt;span&gt;不編入分組&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;5 人&lt;/b&gt;&lt;span&gt;不編入分組&lt;/span&gt;&lt;/div&gt;
         &lt;div&gt;&lt;b&gt;4 組&lt;/b&gt;&lt;span&gt;每組 7-8 人&lt;/span&gt;&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1932,7 +1882,11 @@
         &lt;tbody&gt;
           &lt;tr&gt;
             &lt;td&gt;不編入分組&lt;/td&gt;
-            &lt;td&gt;1 上杉勇司（日本教授）、24 賴郁雯、29 江宜汾、30 徐柏峯&lt;/td&gt;
+            &lt;td&gt;1 上杉勇司（日本教授）、24 賴郁雯、29 江宜汾、30 徐柏峯、35 陳民紋（隨隊攝影）&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;新增工作人員&lt;/td&gt;
+            &lt;td&gt;35 陳民紋，男，隨隊攝影；不編入分組，住宿可與助教或隊輔同房。&lt;/td&gt;
           &lt;/tr&gt;
           &lt;tr&gt;
             &lt;td&gt;第二天加入&lt;/td&gt;

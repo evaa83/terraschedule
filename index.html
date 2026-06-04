@@ -6,15 +6,16 @@
   <title>泰拉學校｜工作分工與住宿分配總整合</title>
   <style>
     :root {
-      --ink: #1f2933;
-      --muted: #667085;
-      --line: #d9dee7;
-      --bg: #f7f8fa;
-      --panel: #ffffff;
-      --accent: #22685f;
-      --accent-soft: #edf5f2;
-      --warn: #fff4e5;
-      --warn-line: #d37b2c;
+      --ink: #24352f;
+      --muted: #6f766b;
+      --line: #ded6c7;
+      --bg: #f7f1e6;
+      --panel: #fffdf7;
+      --accent: #2f6b4f;
+      --accent-dark: #1f4b38;
+      --accent-soft: #e7efe4;
+      --earth: #b86e32;
+      --earth-soft: #fff2d7;
     }
 
     * { box-sizing: border-box; }
@@ -25,7 +26,8 @@
       font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
       color: var(--ink);
       background: var(--bg);
-      line-height: 1.55;
+      background-image: linear-gradient(180deg, #efe5d6 0, #f7f1e6 360px, #f7f1e6 100%);
+      line-height: 1.6;
       letter-spacing: 0;
     }
 
@@ -35,26 +37,38 @@
     }
 
     header {
-      background: var(--panel);
+      background: #efe5d6;
       border-bottom: 1px solid var(--line);
-      padding: 34px 0 24px;
+      padding: 42px 0 28px;
     }
 
     h1 {
-      margin: 0 0 10px;
-      font-size: clamp(30px, 4vw, 44px);
-      line-height: 1.15;
+      margin: 0;
+      color: var(--accent-dark);
+      font-size: clamp(32px, 4.2vw, 48px);
+      line-height: 1.12;
+      font-weight: 800;
     }
 
     h2 {
       margin: 0 0 10px;
+      color: var(--accent-dark);
       font-size: 26px;
       line-height: 1.25;
     }
 
+    .terra-eyebrow {
+      margin: 0 0 9px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
     .subtitle {
-      margin: 0;
-      max-width: 980px;
+      margin: 12px 0 0;
+      max-width: 860px;
       color: var(--muted);
       font-size: 17px;
     }
@@ -63,116 +77,98 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(247, 248, 250, .96);
+      background: rgba(247, 241, 230, .94);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
     }
 
     .top-nav .wrap {
       display: flex;
-      gap: 8px;
+      gap: 9px;
       overflow-x: auto;
-      padding: 10px 0;
+      padding: 11px 0;
     }
 
     a.pill {
       flex: 0 0 auto;
       border: 1px solid var(--line);
       border-radius: 999px;
-      background: var(--panel);
+      background: #fffaf0;
       color: var(--ink);
-      padding: 8px 13px;
+      padding: 8px 14px;
       font-size: 14px;
+      font-weight: 700;
       text-decoration: none;
       white-space: nowrap;
+      box-shadow: 0 4px 14px rgba(56, 49, 36, .04);
     }
 
     a.pill.primary {
       background: var(--accent);
       border-color: var(--accent);
-      color: #fff;
+      color: #fffdf7;
     }
 
-    main { padding: 22px 0 54px; }
+    main { padding: 24px 0 56px; }
 
     section {
-      scroll-margin-top: 74px;
-      margin: 0 0 22px;
+      scroll-margin-top: 78px;
+      margin: 0 0 24px;
     }
 
     .panel {
-      background: var(--panel);
+      background: rgba(255, 253, 247, .94);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 18px;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 14px 38px rgba(56, 49, 36, .07);
     }
 
     .directory {
       display: grid;
       grid-template-columns: 1.05fr 1fr 1fr;
       gap: 14px;
-      margin-top: 14px;
+      margin-top: 16px;
     }
 
     .directory-card {
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--panel);
-      padding: 15px;
+      border-radius: 12px;
+      background: #fffaf0;
+      padding: 16px;
     }
 
     .directory-card strong {
       display: block;
       margin-bottom: 8px;
-      color: var(--accent);
+      color: var(--accent-dark);
       font-size: 17px;
     }
 
-    .directory-card ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .directory-card li {
-      margin: 6px 0;
-      color: var(--muted);
-    }
-
-    .directory-card a {
-      color: var(--ink);
-      text-decoration-color: #a7b3c2;
-      text-underline-offset: 3px;
-    }
+    .directory-card ul { margin: 0; padding-left: 20px; }
+    .directory-card li { margin: 6px 0; color: var(--muted); }
+    .directory-card a { color: var(--ink); text-decoration-color: #bda98e; text-underline-offset: 3px; }
 
     .quick-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
-      margin: 12px 0 0;
+      margin: 14px 0 0;
     }
 
     .quick-grid a {
       display: block;
-      min-height: 70px;
+      min-height: 74px;
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 12px;
       background: var(--accent-soft);
-      padding: 11px 12px;
+      padding: 12px 13px;
       color: var(--ink);
       text-decoration: none;
     }
 
-    .quick-grid b {
-      display: block;
-      margin-bottom: 2px;
-      color: var(--accent);
-    }
-
-    .quick-grid span,
-    .muted {
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .quick-grid b { display: block; margin-bottom: 3px; color: var(--accent-dark); }
+    .quick-grid span, .muted { color: var(--muted); font-size: 14px; }
 
     .frame-head {
       display: flex;
@@ -182,11 +178,7 @@
       margin-bottom: 10px;
     }
 
-    .frame-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
+    .frame-head p { margin: 0; color: var(--muted); font-size: 14px; }
 
     iframe {
       display: block;
@@ -194,21 +186,21 @@
       height: min(860px, calc(100vh - 142px));
       min-height: 680px;
       border: 1px solid var(--line);
-      border-radius: 8px;
-      background: #fff;
+      border-radius: 12px;
+      background: #fffdf7;
     }
 
     .note {
-      border-left: 5px solid var(--warn-line);
-      background: var(--warn);
+      border-left: 5px solid var(--earth);
+      background: var(--earth-soft);
       padding: 12px 14px;
       margin: 12px 0 0;
       font-size: 14px;
+      border-radius: 0 10px 10px 0;
     }
 
     @media (max-width: 980px) {
-      .directory,
-      .quick-grid { grid-template-columns: 1fr; }
+      .directory, .quick-grid { grid-template-columns: 1fr; }
       .frame-head { display: block; }
       iframe { height: 720px; min-height: 560px; }
     }
@@ -217,7 +209,9 @@
 <body>
   <header>
     <div class="wrap">
+      <p class="terra-eyebrow">Terra School｜地之校</p>
       <h1>工作分工與住宿分配總整合</h1>
+      <p class="subtitle">台日跨國行動、AI 食農設計與田野學習的工作會議資料。</p>
     </div>
   </header>
 
@@ -276,12 +270,7 @@
     </section>
 
     <section id="staff" class="panel">
-      <div class="frame-head">
-        <div>
-          <h2>一、五天工作人員分工總表</h2>
-          <p>包含隊輔、活動組、導師、助教、行政財務在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p>
-        </div>
-      </div>
+      <div class="frame-head"><div><h2>一、五天工作人員分工總表</h2><p>包含隊輔、活動組、導師、助教、行政財務在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
@@ -290,17 +279,17 @@
   &lt;title&gt;泰拉學校五日活動｜工作人員分工總表&lt;/title&gt;
   &lt;style&gt;
     :root {
-      --ink: #1f2933;
-      --muted: #667085;
-      --line: #d9dee7;
-      --bg: #f7f8fa;
-      --panel: #ffffff;
-      --head: #edf5f2;
-      --accent: #22685f;
-      --accent-dark: #174942;
-      --warn: #fff4e5;
-      --warn-line: #d37b2c;
-      --soft: #f2f4f7;
+      --ink: #24352f;
+      --muted: #6f766b;
+      --line: #ded6c7;
+      --bg: #f7f1e6;
+      --panel: #fffdf7;
+      --head: #e7efe4;
+      --accent: #2f6b4f;
+      --accent-dark: #1f4b38;
+      --warn: #fff2d7;
+      --warn-line: #b86e32;
+      --soft: #efe6d8;
     }
 
     * {
@@ -312,12 +301,13 @@
       font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
       color: var(--ink);
       background: var(--bg);
+      background-image: linear-gradient(180deg, #f2eadc 0, #f7f1e6 260px, #f7f1e6 100%);
       line-height: 1.55;
       letter-spacing: 0;
     }
 
     header {
-      background: var(--panel);
+      background: #efe5d6;
       border-bottom: 1px solid var(--line);
       padding: 34px 0 24px;
     }
@@ -328,9 +318,19 @@
     }
 
     h1 {
+      color: #1f4b38;
       margin: 0 0 10px;
       font-size: clamp(30px, 4vw, 46px);
       line-height: 1.15;
+    }
+
+    .terra-eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .subtitle {
@@ -349,9 +349,9 @@
 
     .summary div {
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 12px 14px;
-      background: #fbfdfc;
+      background: #fffaf0;
     }
 
     .summary b {
@@ -432,7 +432,7 @@
       border-collapse: collapse;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       margin: 10px 0 18px;
     }
@@ -488,7 +488,7 @@
     .card {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 13px 14px;
     }
 
@@ -545,6 +545,7 @@
 &lt;body&gt;
   &lt;header&gt;
     &lt;div class=&quot;wrap&quot;&gt;
+      &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
       &lt;h1&gt;五日活動工作人員分工總表&lt;/h1&gt;
       &lt;p class=&quot;subtitle&quot;&gt;依目前討論整理：隊輔負責安全、生活照顧、移動與現場流程；活動組負責破冰、團康與交流活動；導師負責教學或引導單元；助教跟著小組推進設計思考；張沛勻負責行政與財務。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;
@@ -1327,16 +1328,10 @@
 &lt;/body&gt;
 &lt;/html&gt;
 " title="五天工作人員分工總表"></iframe>
-      <div class="note">討論提醒：此區內容已內嵌在 index.html 中，不再依賴外部檔案。</div>
     </section>
 
     <section id="lodging" class="panel">
-      <div class="frame-head">
-        <div>
-          <h2>二、新版 34 人住宿分配</h2>
-          <p>目前規則：學員集中於主要住宿點；星光/春風剩餘房間優先安排隊輔；阿聰自然田為 6 間雙人房；藏聚民宿作為第三晚補充住宿點。</p>
-        </div>
-      </div>
+      <div class="frame-head"><div><h2>二、新版 34 人住宿分配</h2><p>學員集中於主要住宿點；星光/春風剩餘房間優先安排隊輔；阿聰自然田為 6 間雙人房。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
@@ -1345,15 +1340,15 @@
   &lt;title&gt;泰拉學校｜住宿分配（新版 34 人）&lt;/title&gt;
   &lt;style&gt;
     :root {
-      --ink: #20242a;
-      --muted: #667085;
-      --line: #d9dee7;
-      --bg: #fafafa;
-      --panel: #ffffff;
-      --head: #edf5f2;
-      --accent: #22685f;
-      --warn: #fff4e5;
-      --warn-line: #d37b2c;
+      --ink: #24352f;
+      --muted: #6f766b;
+      --line: #ded6c7;
+      --bg: #f7f1e6;
+      --panel: #fffdf7;
+      --head: #e7efe4;
+      --accent: #2f6b4f;
+      --warn: #fff2d7;
+      --warn-line: #b86e32;
     }
 
     * { box-sizing: border-box; }
@@ -1363,6 +1358,7 @@
       font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
       color: var(--ink);
       background: var(--bg);
+      background-image: linear-gradient(180deg, #f2eadc 0, #f7f1e6 260px, #f7f1e6 100%);
       line-height: 1.55;
       letter-spacing: 0;
     }
@@ -1373,15 +1369,25 @@
     }
 
     header {
-      background: var(--panel);
+      background: #efe5d6;
       border-bottom: 1px solid var(--line);
       padding: 34px 0 24px;
     }
 
     h1 {
+      color: #1f4b38;
       margin: 0 0 10px;
       font-size: clamp(30px, 4vw, 44px);
       line-height: 1.15;
+    }
+
+    .terra-eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .subtitle {
@@ -1400,8 +1406,9 @@
 
     .summary div {
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: var(--panel);
+      box-shadow: 0 10px 28px rgba(56, 49, 36, .06);
       padding: 13px 14px;
     }
 
@@ -1442,7 +1449,7 @@
       border-collapse: collapse;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       margin: 10px 0 18px;
     }
@@ -1457,7 +1464,7 @@
 
     th {
       background: var(--head);
-      color: #174942;
+      color: #1f4b38;
       font-weight: 700;
       white-space: nowrap;
     }
@@ -1487,6 +1494,7 @@
 &lt;body&gt;
   &lt;header&gt;
     &lt;div class=&quot;wrap&quot;&gt;
+      &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
       &lt;h1&gt;住宿分配（新版 34 人）&lt;/h1&gt;
       &lt;p class=&quot;subtitle&quot;&gt;依新版名冊與目前規則重排：上杉老師單住；住宿以同性別為主；第一、二晚學生集中住星光碧后，第三晚學生集中住春風草堂；剩餘房間優先安排隊輔，吳孟龍可與男學生同住。阿聰自然田更新為 6 間雙人房。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;
@@ -1695,12 +1703,7 @@
     </section>
 
     <section id="groups" class="panel">
-      <div class="frame-head">
-        <div>
-          <h2>三、四組分組方案</h2>
-          <p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，並讓日本學生與政大兩位學生分散到四組。</p>
-        </div>
-      </div>
+      <div class="frame-head"><div><h2>三、四組分組方案</h2><p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，並讓日本學生與政大兩位學生分散到四組。</p></div></div>
       <iframe srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;zh-Hant&quot;&gt;
 &lt;head&gt;
@@ -1709,15 +1712,15 @@
   &lt;title&gt;泰拉學校｜分組結果（四組方案）&lt;/title&gt;
   &lt;style&gt;
     :root {
-      --ink: #20242a;
-      --muted: #667085;
-      --line: #d9dee7;
-      --bg: #fafafa;
-      --panel: #ffffff;
-      --head: #edf5f2;
-      --accent: #22685f;
-      --warn: #fff4e5;
-      --warn-line: #d37b2c;
+      --ink: #24352f;
+      --muted: #6f766b;
+      --line: #ded6c7;
+      --bg: #f7f1e6;
+      --panel: #fffdf7;
+      --head: #e7efe4;
+      --accent: #2f6b4f;
+      --warn: #fff2d7;
+      --warn-line: #b86e32;
     }
 
     * {
@@ -1729,6 +1732,7 @@
       font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
       color: var(--ink);
       background: var(--bg);
+      background-image: linear-gradient(180deg, #f2eadc 0, #f7f1e6 260px, #f7f1e6 100%);
       line-height: 1.55;
       letter-spacing: 0;
     }
@@ -1739,15 +1743,25 @@
     }
 
     header {
-      background: var(--panel);
+      background: #efe5d6;
       border-bottom: 1px solid var(--line);
       padding: 34px 0 24px;
     }
 
     h1 {
+      color: #1f4b38;
       margin: 0 0 10px;
       font-size: clamp(30px, 4vw, 44px);
       line-height: 1.15;
+    }
+
+    .terra-eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
 
     .subtitle {
@@ -1767,8 +1781,9 @@
     .summary div,
     .card {
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       background: var(--panel);
+      box-shadow: 0 10px 28px rgba(56, 49, 36, .06);
       padding: 13px 14px;
     }
 
@@ -1811,7 +1826,7 @@
       border-collapse: collapse;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 10px;
       overflow: hidden;
       margin: 10px 0 18px;
     }
@@ -1827,7 +1842,7 @@
 
     th {
       background: var(--head);
-      color: #174942;
+      color: #1f4b38;
       font-weight: 700;
       white-space: nowrap;
     }
@@ -1892,6 +1907,7 @@
 &lt;body&gt;
   &lt;header&gt;
     &lt;div class=&quot;wrap&quot;&gt;
+      &lt;p class=&quot;terra-eyebrow&quot;&gt;Terra School｜地之校&lt;/p&gt;
       &lt;h1&gt;分組結果（四組方案）&lt;/h1&gt;
       &lt;p class=&quot;subtitle&quot;&gt;依新版 34 人名冊重排。延續先前原則：日本教授不編組；賴郁雯、徐柏峯、江宜汾不加入分組；日本學生與兩位政大學生分散至四組；每組配置助教與隊輔。&lt;/p&gt;
       &lt;div class=&quot;summary&quot;&gt;

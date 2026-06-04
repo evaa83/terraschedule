@@ -18,7 +18,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -53,12 +52,6 @@
       line-height: 1.25;
     }
 
-    h3 {
-      margin: 18px 0 8px;
-      font-size: 18px;
-      color: var(--accent);
-    }
-
     .subtitle {
       margin: 0;
       max-width: 980px;
@@ -82,8 +75,7 @@
       padding: 10px 0;
     }
 
-    a.pill,
-    a.source-link {
+    a.pill {
       flex: 0 0 auto;
       border: 1px solid var(--line);
       border-radius: 999px;
@@ -101,9 +93,7 @@
       color: #fff;
     }
 
-    main {
-      padding: 22px 0 54px;
-    }
+    main { padding: 22px 0 54px; }
 
     section {
       scroll-margin-top: 74px;
@@ -156,7 +146,7 @@
 
     .quick-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 10px;
       margin: 12px 0 0;
     }
@@ -198,24 +188,6 @@
       font-size: 14px;
     }
 
-    .source-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
-
-    .source-actions a {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--panel);
-      color: var(--ink);
-      padding: 7px 11px;
-      font-size: 13px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
     iframe {
       display: block;
       width: 100%;
@@ -236,23 +208,9 @@
 
     @media (max-width: 980px) {
       .directory,
-      .quick-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .frame-head {
-        display: block;
-      }
-
-      .source-actions {
-        justify-content: flex-start;
-        margin-top: 10px;
-      }
-
-      iframe {
-        height: 720px;
-        min-height: 560px;
-      }
+      .quick-grid { grid-template-columns: 1fr; }
+      .frame-head { display: block; }
+      iframe { height: 720px; min-height: 560px; }
     }
   </style>
 </head>
@@ -260,7 +218,7 @@
   <header>
     <div class="wrap">
       <h1>工作分工與住宿分配總整合</h1>
-      <p class="subtitle">本頁將五天工作人員分工、住宿分配與四組分組結果放在同一份會議用 HTML 中。下方目錄可快速跳到各討論區；各區內容仍讀取最新原檔，後續調整原檔會同步反映。</p>
+      <p class="subtitle">本頁已打包成單一 index.html，內含五天工作人員分工、住宿分配與四組分組結果。上傳 GitHub Pages 時只需要上傳這一個檔案。</p>
     </div>
   </header>
 
@@ -270,7 +228,6 @@
       <a class="pill" href="#staff">工作人員分工</a>
       <a class="pill" href="#lodging">住宿分配</a>
       <a class="pill" href="#groups">四組分組</a>
-      <a class="pill" href="#source">原檔連結</a>
     </div>
   </nav>
 
@@ -288,7 +245,6 @@
             <li>Day 3：水月農莊、慢島生活、素材整理、春風住宿</li>
             <li>Day 4：深溝調查、佛光移動、日籍/政大學生返台、解方發想</li>
             <li>Day 5：植樹、成果發表、結業典禮、返台</li>
-            <li>交通與行前準備、共通角色規則</li>
           </ul>
         </div>
         <div class="directory-card">
@@ -306,7 +262,6 @@
           <strong>三、分組與檢查</strong>
           <ul>
             <li><a href="#groups">四組分組方案</a></li>
-            <li>不加入分組：賴郁雯、徐柏峯、江宜汾、上杉勇司</li>
             <li>日本學生與政大兩位學生分散至四組</li>
             <li>每組配置助教與隊輔</li>
             <li>檢查 7/1 離隊後各組仍可運作</li>
@@ -318,7 +273,6 @@
         <a href="#staff"><b>工作分工</b><span>每日時段、角色任務、待辦事項</span></a>
         <a href="#lodging"><b>住宿分配</b><span>房型、室友、補充住宿點</span></a>
         <a href="#groups"><b>四組分組</b><span>組員、助教、隊輔、離隊平衡</span></a>
-        <a href="#source"><b>原檔連結</b><span>單獨開啟三份原始 HTML</span></a>
       </div>
     </section>
 
@@ -328,12 +282,1053 @@
           <h2>一、五天工作人員分工總表</h2>
           <p>包含隊輔、活動組、導師、助教、行政財務在每天每個時段的任務，以及交通與行前準備、共通角色規則。</p>
         </div>
-        <div class="source-actions">
-          <a href="staff.html" target="_blank" rel="noopener">開啟工作分工原檔</a>
-        </div>
       </div>
-      <iframe src="staff.html" title="五天工作人員分工總表"></iframe>
-      <div class="note">討論提醒：工作分工原檔內仍有自己的 Day 1-5、交通/行前、共通規則切換列，可在此框內直接切換。</div>
+      <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-Hant&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;泰拉學校五日活動｜工作人員分工總表&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --ink: #1f2933;
+      --muted: #667085;
+      --line: #d9dee7;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --head: #edf5f2;
+      --accent: #22685f;
+      --accent-dark: #174942;
+      --warn: #fff4e5;
+      --warn-line: #d37b2c;
+      --soft: #f2f4f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0 24px;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 980px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .summary div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #fbfdfc;
+    }
+
+    .summary b {
+      display: block;
+      color: var(--accent);
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .summary span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: rgba(247, 248, 250, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .tabbar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .tabbar button {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 13px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .tabbar button[aria-selected=&quot;true&quot;] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    main {
+      padding: 24px 0 56px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0 18px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--head);
+      color: var(--accent-dark);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .note {
+      border-left: 5px solid var(--accent);
+      background: #eff7f4;
+      padding: 12px 14px;
+      margin: 12px 0 16px;
+    }
+
+    .todo {
+      border-left-color: var(--warn-line);
+      background: var(--warn);
+    }
+
+    .checklist {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .checklist li {
+      margin: 7px 0;
+    }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 12px 0 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin: 0 3px 3px 0;
+      background: var(--soft);
+      color: #344054;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    @media print {
+      .tabs {
+        display: none;
+      }
+
+      section {
+        display: block;
+        page-break-after: always;
+      }
+
+      body {
+        background: #fff;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .summary,
+      .role-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+      &lt;h1&gt;五日活動工作人員分工總表&lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依目前討論整理：隊輔負責安全、生活照顧、移動與現場流程；活動組負責破冰、團康與交流活動；導師負責教學或引導單元；助教跟著小組推進設計思考；張沛勻負責行政與財務。&lt;/p&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        &lt;div&gt;&lt;b&gt;隊輔&lt;/b&gt;&lt;span&gt;林宛儒、吳孟龍、林秀芬、李樂昱&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;活動組&lt;/b&gt;&lt;span&gt;林宛儒、林秀芬、吳孟龍&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;導師&lt;/b&gt;&lt;span&gt;徐柏峯、李樂昱、江宜汾&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;助教&lt;/b&gt;&lt;span&gt;陳思穎、林妙怡、吳孟龍、李樂昱&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;行政財務&lt;/b&gt;&lt;span&gt;張沛勻&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;nav class=&quot;tabs&quot;&gt;
+    &lt;div class=&quot;wrap tabbar&quot; role=&quot;tablist&quot; aria-label=&quot;五天行程切換&quot;&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot; aria-controls=&quot;day1&quot; data-tab=&quot;day1&quot;&gt;Day 1｜6/28&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;day2&quot; data-tab=&quot;day2&quot;&gt;Day 2｜6/29&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;day3&quot; data-tab=&quot;day3&quot;&gt;Day 3｜6/30&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;day4&quot; data-tab=&quot;day4&quot;&gt;Day 4｜7/1&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;day5&quot; data-tab=&quot;day5&quot;&gt;Day 5｜7/2&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;prep&quot; data-tab=&quot;prep&quot;&gt;交通/行前&lt;/button&gt;
+      &lt;button type=&quot;button&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot; aria-controls=&quot;common&quot; data-tab=&quot;common&quot;&gt;共通規則&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/nav&gt;
+
+  &lt;main class=&quot;wrap&quot;&gt;
+    &lt;section id=&quot;day1&quot; class=&quot;active&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;Day 1｜6/28 Sun&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;主軸：報到、論壇、分組公布、移動破冰、open space 與題目選定。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;隊輔&lt;/th&gt;
+            &lt;th&gt;活動組&lt;/th&gt;
+            &lt;th&gt;導師&lt;/th&gt;
+            &lt;th&gt;助教&lt;/th&gt;
+            &lt;th&gt;行政 / 財務&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐、上午&lt;/td&gt;
+            &lt;td&gt;未安排正式活動&lt;/td&gt;
+            &lt;td&gt;暫無主要任務&lt;/td&gt;
+            &lt;td&gt;暫無主要任務&lt;/td&gt;
+            &lt;td&gt;論壇前準備或確認流程&lt;/td&gt;
+            &lt;td&gt;暫無主要任務&lt;/td&gt;
+            &lt;td&gt;準備報到、文件、簽到表、勞報單、拍攝同意資料&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;12:00-13:20&lt;/td&gt;
+            &lt;td&gt;報到、中餐&lt;/td&gt;
+            &lt;td&gt;報到動線、接待、發餐具/紀念品/餐盒、行李放置、現場秩序、提醒學生與老師完成當日簽到&lt;/td&gt;
+            &lt;td&gt;可協助暖場與等待氣氛&lt;/td&gt;
+            &lt;td&gt;準備論壇相關內容&lt;/td&gt;
+            &lt;td&gt;現場支援&lt;/td&gt;
+            &lt;td&gt;張沛勻準備並管理簽到表、個資/拍攝同意、勞報單等文件&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;13:30-17:00&lt;/td&gt;
+            &lt;td&gt;台日青年永續論壇&lt;/td&gt;
+            &lt;td&gt;維持秩序、照顧學員需求、協助拍照記錄；留意學員是否理解分組與後續流程&lt;/td&gt;
+            &lt;td&gt;可協助論壇前後暖場&lt;/td&gt;
+            &lt;td&gt;徐柏峯介紹未來幾天工作方式、小組工作方式、隊輔與助教角色，並公布分組名單；其他導師依論壇安排發言&lt;/td&gt;
+            &lt;td&gt;確認自己小組與成員，準備後續帶組&lt;/td&gt;
+            &lt;td&gt;張沛勻找講者/來賓簽勞報單、確認戶籍地址、收交通票據、處理個資與拍攝同意&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;論壇後、晚餐前&lt;/td&gt;
+            &lt;td&gt;晚餐與上車準備&lt;/td&gt;
+            &lt;td&gt;引導上車、協助發餐盒；確認學生與老師當日已完成一次簽到即可&lt;/td&gt;
+            &lt;td&gt;協助現場秩序與等待&lt;/td&gt;
+            &lt;td&gt;論壇收尾&lt;/td&gt;
+            &lt;td&gt;現場支援&lt;/td&gt;
+            &lt;td&gt;確認講者行政文件、勞報單與交通單據完成&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;17:30-18:30&lt;/td&gt;
+            &lt;td&gt;餐盒；移動到南澳&lt;/td&gt;
+            &lt;td&gt;點名、引導上遊覽車、發餐盒、提醒餐具與垃圾處理&lt;/td&gt;
+            &lt;td&gt;設計車上活動，讓同組成員彼此認識、破冰、熟悉&lt;/td&gt;
+            &lt;td&gt;可支援車上說明&lt;/td&gt;
+            &lt;td&gt;觀察自己小組狀態&lt;/td&gt;
+            &lt;td&gt;確認交通與行政資料帶齊&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;抵達星光碧后&lt;/td&gt;
+            &lt;td&gt;入住前整理&lt;/td&gt;
+            &lt;td&gt;下車點名、房間分配、帶大家放行李、確認室友與房號&lt;/td&gt;
+            &lt;td&gt;協助等待秩序&lt;/td&gt;
+            &lt;td&gt;可協助住宿說明&lt;/td&gt;
+            &lt;td&gt;協助組員安頓&lt;/td&gt;
+            &lt;td&gt;確認住宿名單&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;19:00-21:00&lt;/td&gt;
+            &lt;td&gt;破冰與 open space；題目選定&lt;/td&gt;
+            &lt;td&gt;集合、秩序、安全、人數確認&lt;/td&gt;
+            &lt;td&gt;必要時補充破冰或小組暖身&lt;/td&gt;
+            &lt;td&gt;徐柏峯主帶 open space 與題目選定&lt;/td&gt;
+            &lt;td&gt;協助各組理解任務、陪伴討論、收斂題目&lt;/td&gt;
+            &lt;td&gt;協助紀錄各組題目結果&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;晚間結束後&lt;/td&gt;
+            &lt;td&gt;就寢引導&lt;/td&gt;
+            &lt;td&gt;確認房間、室友、隔日集合時間；確認人數與安全狀態&lt;/td&gt;
+            &lt;td&gt;協助收尾&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認小組狀態&lt;/td&gt;
+            &lt;td&gt;確認隔日行政需求&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;strong&gt;Day 1 待辦 / 待確認&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;論壇講者/來賓名單、個資與拍攝同意流程已確定。&lt;/li&gt;
+          &lt;li&gt;勞報單與交通單據由張沛勻協助處理與確認。&lt;/li&gt;
+          &lt;li&gt;學生與老師五天每日都需簽到一次，時間不限；簽到表供講師費與餐費核銷使用，不需要簽退。&lt;/li&gt;
+          &lt;li&gt;確認徐柏峯公布分組與角色介紹的簡報內容。&lt;/li&gt;
+          &lt;li&gt;活動組設計車上同組破冰活動。&lt;/li&gt;
+          &lt;li&gt;6/28 遊覽車 17:30 自台北政大出發至南澳星光碧后，費用 12000 元含稅，世點旅行社黃麗娟負責。&lt;/li&gt;
+          &lt;li&gt;確認抵達星光碧后後的房間分配說明流程。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;day2&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;Day 2｜6/29 Mon&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;主軸：原生園靜坐、阿聰自然田體驗、原民文化餐、AI 桌上研究、跨文化之夜。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;隊輔&lt;/th&gt;
+            &lt;th&gt;活動組&lt;/th&gt;
+            &lt;th&gt;導師&lt;/th&gt;
+            &lt;th&gt;助教&lt;/th&gt;
+            &lt;th&gt;行政 / 財務&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;起床後&lt;/td&gt;
+            &lt;td&gt;早晨整隊、每日簽到&lt;/td&gt;
+            &lt;td&gt;提醒起床、集合、點名；提醒水壺裝滿、餐盒餐具；雨衣地墊由主辦方準備，同學不用自帶&lt;/td&gt;
+            &lt;td&gt;協助集合氣氛&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認自己小組狀態&lt;/td&gt;
+            &lt;td&gt;張沛勻確認當日行政資料；學生與老師每日簽到，供講師費與餐費核銷使用&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐&lt;/td&gt;
+            &lt;td&gt;在地早餐店或送餐&lt;/td&gt;
+            &lt;td&gt;確認每位學員有早餐；協助分發、排隊、用餐秩序、餐具清洗&lt;/td&gt;
+            &lt;td&gt;協助秩序&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;張沛勻支付早餐費用，取得收據/單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;約 08:10&lt;/td&gt;
+            &lt;td&gt;星光碧后步行前往原生園&lt;/td&gt;
+            &lt;td&gt;點名；確認水壺、餐盒餐具；隊伍前後照看避免掉隊；雨衣地墊由主辦方準備&lt;/td&gt;
+            &lt;td&gt;協助移動秩序&lt;/td&gt;
+            &lt;td&gt;李樂昱準備帶靜坐&lt;/td&gt;
+            &lt;td&gt;跟著組員移動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;08:30-09:30&lt;/td&gt;
+            &lt;td&gt;原生園靜坐&lt;/td&gt;
+            &lt;td&gt;確認人數到齊、安靜入座&lt;/td&gt;
+            &lt;td&gt;協助安定現場&lt;/td&gt;
+            &lt;td&gt;李樂昱帶靜坐、五感覺察&lt;/td&gt;
+            &lt;td&gt;陪同小組參與&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;09:30-12:00&lt;/td&gt;
+            &lt;td&gt;阿聰自然田：白甘蔗採收榨汁、鋸竹子手作午餐的碗、秀明農法介紹&lt;/td&gt;
+            &lt;td&gt;移動安全、補水、安全提醒、照顧身體狀態&lt;/td&gt;
+            &lt;td&gt;協助轉場與秩序&lt;/td&gt;
+            &lt;td&gt;徐柏峯提醒不只是體驗，也要觀察與訪談&lt;/td&gt;
+            &lt;td&gt;陪各組把體驗轉成觀察、提問、紀錄、照片/錄音/錄影&lt;/td&gt;
+            &lt;td&gt;若離開前需結算，張沛勻處理付款與收據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;12:00-13:20&lt;/td&gt;
+            &lt;td&gt;原住民文化認識與部落餐&lt;/td&gt;
+            &lt;td&gt;協調座位、餐食分配、用餐秩序；提醒餐盒使用、清洗、廚餘處理&lt;/td&gt;
+            &lt;td&gt;協助用餐氣氛&lt;/td&gt;
+            &lt;td&gt;可補充文化觀察方向&lt;/td&gt;
+            &lt;td&gt;提醒食農、文化、餐食、服飾、織品等觀察與訪談素材&lt;/td&gt;
+            &lt;td&gt;視情況處理餐費、收據、單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;13:30-17:00&lt;/td&gt;
+            &lt;td&gt;AI 應用市場理解：桌上研究、線上資料收集（阿聰協助嘗試借用原生園會議室）&lt;/td&gt;
+            &lt;td&gt;維持課程秩序、時間提醒、休息提醒&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯教大家依題目進行資料收集&lt;/td&gt;
+            &lt;td&gt;跟各組協助資料收集、整理問題、形成後續訪談方向&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;17:30-18:30&lt;/td&gt;
+            &lt;td&gt;晚餐餐盒，供應方式待確認&lt;/td&gt;
+            &lt;td&gt;取餐/發餐、用餐秩序、餐盒餐具清洗&lt;/td&gt;
+            &lt;td&gt;銜接晚間活動氣氛&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;觀察小組狀態&lt;/td&gt;
+            &lt;td&gt;視情況處理餐費與單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;19:00-21:00&lt;/td&gt;
+            &lt;td&gt;跨文化之夜&lt;/td&gt;
+            &lt;td&gt;集合、秩序、安全、人數掌握&lt;/td&gt;
+            &lt;td&gt;主責設計台日交流活動，促進台灣學生與日本學生互動&lt;/td&gt;
+            &lt;td&gt;可參與或支援交流&lt;/td&gt;
+            &lt;td&gt;觀察小組互動與跨文化溝通&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;晚間結束後&lt;/td&gt;
+            &lt;td&gt;就寢引導&lt;/td&gt;
+            &lt;td&gt;確認回房、隔日集合時間、攜帶物品與安全狀態&lt;/td&gt;
+            &lt;td&gt;活動收尾&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認小組狀態&lt;/td&gt;
+            &lt;td&gt;確認隔日行政需求；不需簽退&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;strong&gt;Day 2 待辦 / 待確認&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;確認早餐是隊輔取餐，或早餐店送餐。&lt;/li&gt;
+          &lt;li&gt;原生園靜坐調整為 08:30-09:30，共一小時。&lt;/li&gt;
+          &lt;li&gt;阿聰自然田調整為 09:30 開始，上午先做白甘蔗採收，再鋸竹子手作午餐的碗。&lt;/li&gt;
+          &lt;li&gt;阿聰協助嘗試借用原生園會議室，作為下午 AI 桌上研究與資料整理空間。&lt;/li&gt;
+          &lt;li&gt;晚餐供應方式由阿聰協助詢問，仍待確認。&lt;/li&gt;
+          &lt;li&gt;雨衣地墊由主辦方準備，同學不用自帶。&lt;/li&gt;
+          &lt;li&gt;徐柏峯事前準備阿聰自然田與原民文化餐的觀察/訪談提醒。&lt;/li&gt;
+          &lt;li&gt;活動組設計跨文化之夜內容。&lt;/li&gt;
+          &lt;li&gt;學生與老師每日簽到一次即可，時間不限，不需要簽退。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;day3&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;Day 3｜6/30 Tue&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;主軸：水月農莊、農村饗宴、慢島生活訪談與體驗、晚間素材整理與放鬆活動。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;隊輔&lt;/th&gt;
+            &lt;th&gt;活動組&lt;/th&gt;
+            &lt;th&gt;導師&lt;/th&gt;
+            &lt;th&gt;助教&lt;/th&gt;
+            &lt;th&gt;行政 / 財務&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;起床、早餐、靜坐&lt;/td&gt;
+            &lt;td&gt;比照 Day 2&lt;/td&gt;
+            &lt;td&gt;集合、點名、早餐、補水與物品提醒&lt;/td&gt;
+            &lt;td&gt;協助集合氣氛&lt;/td&gt;
+            &lt;td&gt;李樂昱可帶靜坐/五感覺察&lt;/td&gt;
+            &lt;td&gt;確認小組狀態&lt;/td&gt;
+            &lt;td&gt;張沛勻處理早餐費用與單據；確認學生與老師完成每日簽到&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐後&lt;/td&gt;
+            &lt;td&gt;搭遊覽車前往水月農莊&lt;/td&gt;
+            &lt;td&gt;呼叫集合、點名、提醒水壺/餐具/隨身物品、全員上車&lt;/td&gt;
+            &lt;td&gt;設計車上放鬆交流活動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;跟著各組移動&lt;/td&gt;
+            &lt;td&gt;張沛勻聯繫遊覽車，確認抵達時間與地點；費用單據待確認&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;上午&lt;/td&gt;
+            &lt;td&gt;水月農莊：採蓮或採黑豆、五色稻田介紹&lt;/td&gt;
+            &lt;td&gt;下車集合、移動安全、補水、防曬、身體狀態&lt;/td&gt;
+            &lt;td&gt;協助轉場與秩序&lt;/td&gt;
+            &lt;td&gt;徐柏峯提醒這是設計思考場域，需觀察與訪談&lt;/td&gt;
+            &lt;td&gt;提醒拍照、錄音/錄影、筆記、提問；協助各組蒐集素材&lt;/td&gt;
+            &lt;td&gt;若離開前需結算，張沛勻付款並取得收據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;12:00-13:20&lt;/td&gt;
+            &lt;td&gt;農村饗宴：包飯糰與蓮子湯&lt;/td&gt;
+            &lt;td&gt;餐食分配、用餐秩序、餐具清洗、廚餘處理&lt;/td&gt;
+            &lt;td&gt;協助用餐氣氛&lt;/td&gt;
+            &lt;td&gt;可補充食農/農村文化觀察方向&lt;/td&gt;
+            &lt;td&gt;提醒記錄體驗、訪談與觀察&lt;/td&gt;
+            &lt;td&gt;若需支付餐費或體驗費，處理單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;13:30&lt;/td&gt;
+            &lt;td&gt;搭遊覽車移動到員山 / 慢島生活&lt;/td&gt;
+            &lt;td&gt;點名、上車、物品確認&lt;/td&gt;
+            &lt;td&gt;安排簡短放鬆、交流或回顧活動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;協助各組整理上午觀察&lt;/td&gt;
+            &lt;td&gt;遊覽車費用支付時間待確認&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;15:00-18:00&lt;/td&gt;
+            &lt;td&gt;慢島生活：Leica 訪談、水稻踏查、稻草編織&lt;/td&gt;
+            &lt;td&gt;現場秩序、戶外安全、補水、材料與活動安全&lt;/td&gt;
+            &lt;td&gt;協助活動轉場&lt;/td&gt;
+            &lt;td&gt;徐柏峯提醒訪談目的、觀察重點與素材蒐集&lt;/td&gt;
+            &lt;td&gt;協助各組提問、紀錄、拍照、錄音/錄影；整理農人、有機商店、餐廳、創作者等素材&lt;/td&gt;
+            &lt;td&gt;若有講師費、場地費或體驗費，張沛勻處理單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;晚餐後&lt;/td&gt;
+            &lt;td&gt;步行回春風草堂&lt;/td&gt;
+            &lt;td&gt;點名、確認安全步行回民宿、避免掉隊&lt;/td&gt;
+            &lt;td&gt;協助隊伍氣氛&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;跟著小組移動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;抵達春風草堂&lt;/td&gt;
+            &lt;td&gt;房間分配、放行李&lt;/td&gt;
+            &lt;td&gt;說明房間、室友、盥洗與集合時間；確認每人知道住哪裡&lt;/td&gt;
+            &lt;td&gt;協助等待秩序&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;協助組員安頓&lt;/td&gt;
+            &lt;td&gt;確認住宿與需移動到其他住宿點名單&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;19:00-21:00&lt;/td&gt;
+            &lt;td&gt;訪談與晚會&lt;/td&gt;
+            &lt;td&gt;維持秩序、安全、人數；協助活動轉換&lt;/td&gt;
+            &lt;td&gt;設計放鬆活動，讓下午嚴肅工作後有緩衝&lt;/td&gt;
+            &lt;td&gt;徐柏峯帶設計思考整理：彙整 Day 1-Day 3 素材&lt;/td&gt;
+            &lt;td&gt;帶各組整理訪談紀錄、照片影片、觀察筆記與初步歸納&lt;/td&gt;
+            &lt;td&gt;可協助記錄各組進度&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;夜間&lt;/td&gt;
+            &lt;td&gt;就寢與住宿移動&lt;/td&gt;
+            &lt;td&gt;確認回房、就寢安全、隔日集合；協助春風草堂住不下者移動至藏聚民宿&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;可協助確認藏聚民宿住宿移動方式&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認春風草堂與藏聚民宿住宿名單及必要車輛安排&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;strong&gt;Day 3 待辦 / 待確認&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;確認遊覽車抵達星光碧后的時間與地點。&lt;/li&gt;
+          &lt;li&gt;6/30 遊覽車約 08:00，自南澳星光碧后至員山慢島生活，費用 9000 元含稅，世點旅行社負責。&lt;/li&gt;
+          &lt;li&gt;確認水月農莊、慢島生活、餐廳等是否當日現場結算。&lt;/li&gt;
+          &lt;li&gt;可請水月農莊莊主張明麗事先協助聯繫不在場受訪者，安排電話/線上訪談。&lt;/li&gt;
+          &lt;li&gt;確認晚間採「活動組放鬆活動 + 徐柏峯/助教素材整理」交錯進行。&lt;/li&gt;
+          &lt;li&gt;第三晚春風草堂住不下者，安排至附近藏聚民宿住宿；晚餐與住宿細節需持續確認。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;day4&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;Day 4｜7/1 Wed&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;主軸：生態調查、蔬食與食農訪談、米烘焙體驗、移動到佛光大學、洞察與解決方案生成。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;隊輔&lt;/th&gt;
+            &lt;th&gt;活動組&lt;/th&gt;
+            &lt;th&gt;導師&lt;/th&gt;
+            &lt;th&gt;助教&lt;/th&gt;
+            &lt;th&gt;行政 / 財務&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐、課程前&lt;/td&gt;
+            &lt;td&gt;民宿中式早餐、靜坐&lt;/td&gt;
+            &lt;td&gt;用餐秩序、確認早餐、提醒水壺裝滿、防曬、防中暑&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;李樂昱帶靜坐/五感覺察&lt;/td&gt;
+            &lt;td&gt;確認小組狀態&lt;/td&gt;
+            &lt;td&gt;若早餐需結算，張沛勻處理單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;08:30-10:00&lt;/td&gt;
+            &lt;td&gt;深溝調魚大賽團隊｜生態調查、示範與操作&lt;/td&gt;
+            &lt;td&gt;戶外安全、補水、防曬、防中暑、隊伍跟上&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯提醒這是設計思考場域&lt;/td&gt;
+            &lt;td&gt;提醒拍照、錄音/錄影、筆記、提問與紀錄&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;10:00-10:15&lt;/td&gt;
+            &lt;td&gt;點心時間&lt;/td&gt;
+            &lt;td&gt;點心分配、秩序、人數確認、補水&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;可協助小組補充紀錄&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;10:15-11:30&lt;/td&gt;
+            &lt;td&gt;講座+訪談【半農 X 生態學家】&lt;/td&gt;
+            &lt;td&gt;現場秩序、補水提醒&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯協助聚焦訪談目的&lt;/td&gt;
+            &lt;td&gt;協助各組提問、紀錄、整理受訪內容&lt;/td&gt;
+            &lt;td&gt;若有講師費或場地費，處理單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;11:45&lt;/td&gt;
+            &lt;td&gt;步行至一簞食&lt;/td&gt;
+            &lt;td&gt;集合、點名、步行安全，確認全員抵達員山鄉尚深路 122 號&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;跟各組移動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;11:45-13:45&lt;/td&gt;
+            &lt;td&gt;蔬食午餐與訪談：陳幸延、賴青松&lt;/td&gt;
+            &lt;td&gt;用餐座位、餐食秩序、補水、人數確認&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯協助聚焦訪談問題&lt;/td&gt;
+            &lt;td&gt;協助各組把蔬食體驗與訪談轉成素材&lt;/td&gt;
+            &lt;td&gt;視情況處理餐費、講師費、單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;14:00-16:30&lt;/td&gt;
+            &lt;td&gt;桑葚米烘焙：講座+訪談、米食體驗、訪談整理&lt;/td&gt;
+            &lt;td&gt;秩序、材料領取、活動安全、時間提醒&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯帶方法提醒：整理訪談與觀察素材&lt;/td&gt;
+            &lt;td&gt;帶各組訪談、紀錄、整理、收斂重點&lt;/td&gt;
+            &lt;td&gt;若有講師/體驗費，處理單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;16:30 後&lt;/td&gt;
+            &lt;td&gt;全員搭遊覽車到佛光大學；日籍學生、日本教授、兩位政大學生原車回台北&lt;/td&gt;
+            &lt;td&gt;集合、點名、行李上車；說明誰下車住宿、誰原車回台北&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;協助組員理解移動安排&lt;/td&gt;
+            &lt;td&gt;確認交通安排與名單&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;抵達佛光大學&lt;/td&gt;
+            &lt;td&gt;入住分流、放行李&lt;/td&gt;
+            &lt;td&gt;住宿人員下車、拿行李、確認房號與室友；返台人員原車回台北，車上不另安排負責人，由返台人員自行前往&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;可協助現場說明&lt;/td&gt;
+            &lt;td&gt;協助小組成員安頓&lt;/td&gt;
+            &lt;td&gt;確認住宿名單與返程名單&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;17:30-18:30&lt;/td&gt;
+            &lt;td&gt;晚餐：分組討論與分享&lt;/td&gt;
+            &lt;td&gt;用餐秩序、人數確認&lt;/td&gt;
+            &lt;td&gt;不需設計活動&lt;/td&gt;
+            &lt;td&gt;徐柏峯引導各組分享洞察 / insight&lt;/td&gt;
+            &lt;td&gt;協助各組用 AI 整理原始資料，歸納洞察&lt;/td&gt;
+            &lt;td&gt;若餐費需處理，確認單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;19:00-21:00&lt;/td&gt;
+            &lt;td&gt;成果生成與迭代&lt;/td&gt;
+            &lt;td&gt;現場秩序、時間提醒、學員需求&lt;/td&gt;
+            &lt;td&gt;不需設計活動&lt;/td&gt;
+            &lt;td&gt;徐柏峯主帶雙鑽石第二鑽石：從洞察發展解決方案、包裝與驗證點子&lt;/td&gt;
+            &lt;td&gt;跟各組推進解方討論、AI 輔助整理與迭代&lt;/td&gt;
+            &lt;td&gt;可協助記錄各組成果進度&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;晚間結束後&lt;/td&gt;
+            &lt;td&gt;佛光大學住宿&lt;/td&gt;
+            &lt;td&gt;確認房間、室友、隔日集合時間與就寢安全&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認各組狀態&lt;/td&gt;
+            &lt;td&gt;確認隔日行政需求&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;strong&gt;Day 4 待辦 / 待確認&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;學生與老師每日簽到一次即可，時間不限，不需要簽退。&lt;/li&gt;
+          &lt;li&gt;確認佛光大學抵達後房間分配與入住流程。&lt;/li&gt;
+          &lt;li&gt;日本學生、日本教授、兩位政大學生回台北車上不另安排負責人，由返台人員自行前往。&lt;/li&gt;
+          &lt;li&gt;7/1 遊覽車 16:30 自慢島生活至佛光大學；17:30 佛光大學至台北車站，費用 12000 元含稅，世點旅行社負責。&lt;/li&gt;
+          &lt;li&gt;確認各訪談/體驗單位是否需當天支付費用與取得單據。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;note&quot;&gt;
+        &lt;strong&gt;Day 4 其餘注意事項&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;張沛勻在行前通知信提醒水壺、盥洗用具、備用藥品、防曬用品、戶外鞋衣。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;day5&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;Day 5｜7/2 Thu&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;主軸：佛光大學早餐、植樹活動、最後修整、成果發表、結業典禮、遊覽車返台北。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;隊輔&lt;/th&gt;
+            &lt;th&gt;活動組&lt;/th&gt;
+            &lt;th&gt;導師&lt;/th&gt;
+            &lt;th&gt;助教&lt;/th&gt;
+            &lt;th&gt;行政 / 財務&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;起床後&lt;/td&gt;
+            &lt;td&gt;整理行李、退房準備&lt;/td&gt;
+            &lt;td&gt;確認起床、行李、個人物品、集合時間&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;確認小組狀態&lt;/td&gt;
+            &lt;td&gt;張沛勻確認退房與行政資料&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐&lt;/td&gt;
+            &lt;td&gt;佛光大學住宿附早餐 / 滴水坊&lt;/td&gt;
+            &lt;td&gt;引導學員到餐廳、點名、用餐秩序&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;若需單據，張沛勻確認&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;早餐後&lt;/td&gt;
+            &lt;td&gt;移動到植樹場域&lt;/td&gt;
+            &lt;td&gt;集合、點名、引導移動、安全抵達&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;協助小組移動&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;08:30-12:00&lt;/td&gt;
+            &lt;td&gt;種樹活動：傳承與承諾&lt;/td&gt;
+            &lt;td&gt;秩序、安全、補水、防曬&lt;/td&gt;
+            &lt;td&gt;協助活動氣氛&lt;/td&gt;
+            &lt;td&gt;植樹活動細節待與周紅騰教授確認；若有空檔，李樂昱帶最後一次覺察/五感體驗&lt;/td&gt;
+            &lt;td&gt;協助小組參與與記錄&lt;/td&gt;
+            &lt;td&gt;張沛勻確認場地、貴賓或行政需求&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;上午若有時間&lt;/td&gt;
+            &lt;td&gt;成果發表最後修整&lt;/td&gt;
+            &lt;td&gt;秩序、時間提醒&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;徐柏峯帶各組確認發表細節、最後修正&lt;/td&gt;
+            &lt;td&gt;協助各組整理簡報、講稿、分工、Pitch 重點&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;12:00-13:20&lt;/td&gt;
+            &lt;td&gt;佛光大學滴水坊午餐&lt;/td&gt;
+            &lt;td&gt;引導用餐、點名、提醒下午集合&lt;/td&gt;
+            &lt;td&gt;協助氣氛&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;協助小組掌握下午發表準備&lt;/td&gt;
+            &lt;td&gt;確認餐費或單據&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;13:30-17:00&lt;/td&gt;
+            &lt;td&gt;成果發表、專家講評、結業典禮&lt;/td&gt;
+            &lt;td&gt;現場秩序、引導進出場、時間提醒&lt;/td&gt;
+            &lt;td&gt;協助結業典禮氣氛、小獎項頒發、友誼活動&lt;/td&gt;
+            &lt;td&gt;徐柏峯主責成果發表流程；受邀老師參與講評&lt;/td&gt;
+            &lt;td&gt;協助各組發表前準備、上台順序、資料確認&lt;/td&gt;
+            &lt;td&gt;張沛勻協助來賓接待、直播行政、結業證書與文件&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;成果發表期間&lt;/td&gt;
+            &lt;td&gt;現場與線上直播&lt;/td&gt;
+            &lt;td&gt;維持秩序，避免干擾直播&lt;/td&gt;
+            &lt;td&gt;協助主持感與頒獎橋段&lt;/td&gt;
+            &lt;td&gt;老師們講評&lt;/td&gt;
+            &lt;td&gt;支援小組發表與現場問題&lt;/td&gt;
+            &lt;td&gt;協助直播行政、來賓名單、文件與證書&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;約 17:00&lt;/td&gt;
+            &lt;td&gt;遊覽車回台北&lt;/td&gt;
+            &lt;td&gt;確認所有人與行李上車、點名、下車點確認&lt;/td&gt;
+            &lt;td&gt;可安排簡短車上收尾&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;無主要任務&lt;/td&gt;
+            &lt;td&gt;張沛勻確認遊覽車時間、返程路線與單據&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;strong&gt;Day 5 待辦 / 待確認&lt;/strong&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;植樹活動需與周紅騰教授確認所需物品與流程。&lt;/li&gt;
+          &lt;li&gt;確認上午是否安排李樂昱最後一次覺察與五感體驗。&lt;/li&gt;
+          &lt;li&gt;確認成果發表邀請哪些老師現場講評。&lt;/li&gt;
+          &lt;li&gt;確認直播設備、連線、收音、網址與測試負責人。&lt;/li&gt;
+          &lt;li&gt;張沛勻需出隊前印製完成結業證書。&lt;/li&gt;
+          &lt;li&gt;活動組發想小獎項，例如最有創意獎、最活潑獎等。&lt;/li&gt;
+          &lt;li&gt;確認回台北下車點：除台北車站外是否需要其他停靠點。&lt;/li&gt;
+          &lt;li&gt;7/2 遊覽車 17:30 自佛光大學回台北，費用 6500 元未稅，一乙安達小客車，當場付現或結束七天內匯款。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;prep&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;交通與行前準備&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;資料來源：遊覽車.docx，以及前面工作分工討論。此頁供張沛勻、隊輔與活動組確認交通、付款單據與行前通知內容。&lt;/p&gt;
+
+      &lt;h3&gt;遊覽車資訊&lt;/h3&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;日期&lt;/th&gt;
+            &lt;th&gt;行程&lt;/th&gt;
+            &lt;th&gt;時間&lt;/th&gt;
+            &lt;th&gt;費用&lt;/th&gt;
+            &lt;th&gt;負責公司 / 聯絡&lt;/th&gt;
+            &lt;th&gt;工作提醒&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;6/28&lt;/td&gt;
+            &lt;td&gt;台北政大 → 南澳星光碧后&lt;/td&gt;
+            &lt;td&gt;17:30&lt;/td&gt;
+            &lt;td&gt;12000 元，含稅&lt;/td&gt;
+            &lt;td&gt;世點旅行社；黃麗娟 0925-257-575；佛光周老師介紹&lt;/td&gt;
+            &lt;td&gt;隊輔點名上車、發餐盒；活動組設計車上破冰；張沛勻確認單據。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;6/30&lt;/td&gt;
+            &lt;td&gt;南澳星光碧后 → 員山慢島生活&lt;/td&gt;
+            &lt;td&gt;約 08:00&lt;/td&gt;
+            &lt;td&gt;9000 元，含稅&lt;/td&gt;
+            &lt;td&gt;世點旅行社&lt;/td&gt;
+            &lt;td&gt;張沛勻確認抵達時間與地點；隊輔集合點名；活動組安排車上放鬆交流。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;7/1&lt;/td&gt;
+            &lt;td&gt;員山慢島生活 → 佛光大學；佛光大學 → 台北車站&lt;/td&gt;
+            &lt;td&gt;16:30；17:30&lt;/td&gt;
+            &lt;td&gt;12000 元，含稅&lt;/td&gt;
+            &lt;td&gt;世點旅行社&lt;/td&gt;
+            &lt;td&gt;全員先到佛光大學；住宿者下車；日本學生、日本教授與兩位政大學生原車回台北，車上不另安排負責人。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;7/2&lt;/td&gt;
+            &lt;td&gt;佛光大學 → 台北&lt;/td&gt;
+            &lt;td&gt;17:30&lt;/td&gt;
+            &lt;td&gt;6500 元，未稅&lt;/td&gt;
+            &lt;td&gt;一乙安達小客車&lt;/td&gt;
+            &lt;td&gt;當場付現或結束七天內匯款皆可；需確認除台北車站外是否有其他下車點。&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;h3&gt;行前通知需提醒學員攜帶&lt;/h3&gt;
+      &lt;div class=&quot;note&quot;&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;水壺：戶外與農場行程多，每天出發前需裝滿水，預防中暑。&lt;/li&gt;
+          &lt;li&gt;盥洗用具：民宿不提供，需自備牙刷、牙膏、毛巾、洗沐用品等。&lt;/li&gt;
+          &lt;li&gt;備用藥品：個人常用藥、暈車藥、過敏藥、防蚊用品等。&lt;/li&gt;
+          &lt;li&gt;防曬與戶外用品：帽子、防曬乳、薄外套、適合走路的鞋。&lt;/li&gt;
+          &lt;li&gt;餐具使用提醒：活動會使用不鏽鋼餐盒，隊輔會提醒每餐使用與清洗。&lt;/li&gt;
+          &lt;li&gt;雨衣地墊：由主辦方準備，同學不用自帶。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+
+      &lt;h3&gt;交通與行政待辦&lt;/h3&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;張沛勻確認每一段遊覽車的發車地點、抵達地點、司機/公司聯絡方式。&lt;/li&gt;
+          &lt;li&gt;張沛勻確認 6/28、6/30、7/1、7/2 的付款方式、發票或收據格式。&lt;/li&gt;
+          &lt;li&gt;隊輔建立每段上車/下車點名流程，尤其 7/1 佛光大學分流。&lt;/li&gt;
+          &lt;li&gt;活動組準備 6/28、6/30、7/1 車上活動或放鬆交流活動；7/2 可準備簡短收尾。&lt;/li&gt;
+          &lt;li&gt;確認 7/2 回台北是否只停台北車站，或另有其他下車點。&lt;/li&gt;
+          &lt;li&gt;行前通知信由張沛勻統一寄出，內容需包含攜帶物品、集合資訊、住宿提醒、交通資訊。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section id=&quot;common&quot; role=&quot;tabpanel&quot;&gt;
+      &lt;h2&gt;共通角色規則&lt;/h2&gt;
+      &lt;div class=&quot;role-grid&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;隊輔&lt;/strong&gt;
+          &lt;p&gt;&lt;span class=&quot;tag&quot;&gt;林宛儒&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;吳孟龍&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;林秀芬&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;李樂昱&lt;/span&gt;&lt;/p&gt;
+          &lt;p&gt;每組安全照顧者與流程守門人。負責點名、移動、吃住行、補水、防中暑、集合提醒、住宿收尾、學員需求與第一線狀態觀察。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;活動組&lt;/strong&gt;
+          &lt;p&gt;由 &lt;span class=&quot;tag&quot;&gt;林宛儒&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;林秀芬&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;吳孟龍&lt;/span&gt; 負責。主責破冰、團康、車上互動、跨文化之夜、晚會放鬆與結業典禮小獎項。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;導師&lt;/strong&gt;
+          &lt;p&gt;&lt;span class=&quot;tag&quot;&gt;徐柏峯&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;李樂昱&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;江宜汾&lt;/span&gt;&lt;/p&gt;
+          &lt;p&gt;負責教學、引導或專業單元。李樂昱負責靜坐、五感覺察等活動；徐柏峯負責設計思考方法、題目選定、素材整理、成果生成與迭代。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;助教&lt;/strong&gt;
+          &lt;p&gt;&lt;span class=&quot;tag&quot;&gt;陳思穎&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;林妙怡&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;吳孟龍&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;李樂昱&lt;/span&gt;&lt;/p&gt;
+          &lt;p&gt;跟著小組推進設計思考案子。所有設計思考場域都要提醒觀察、訪談、拍照、錄音/錄影、筆記、整理與收斂。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;行政 / 財務&lt;/strong&gt;
+          &lt;p&gt;張沛勻一人負責行政與財務：每日簽到表、付款、收據、單據、勞報單、交通票據、行前通知、證書、名單與必要文件。&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+          &lt;strong&gt;設計思考場域&lt;/strong&gt;
+          &lt;p&gt;農場、職人介紹、體驗、餐食、訪談、講座與素材整理，只要能產生觀察/訪談資料，都視為設計思考場域。&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;h3&gt;五天共通待辦&lt;/h3&gt;
+      &lt;div class=&quot;note todo&quot;&gt;
+        &lt;ul class=&quot;checklist&quot;&gt;
+          &lt;li&gt;學生與老師五天都要簽到，每日一次即可，時間不限；簽到表會用於講師費與餐費核銷，不需要簽退。&lt;/li&gt;
+          &lt;li&gt;張沛勻整理所有需付款、收據、單據、講師勞報單、交通票據的清單。&lt;/li&gt;
+          &lt;li&gt;張沛勻確認遊覽車付款方式、含稅/未稅、發票或收據，以及司機/公司聯絡資訊。&lt;/li&gt;
+          &lt;li&gt;行前通知信需提醒水壺、盥洗用具、備用藥品、防曬用品、適合戶外移動的鞋衣、餐具使用方式。&lt;/li&gt;
+          &lt;li&gt;活動組準備車上活動、跨文化之夜、Day 3 晚會放鬆活動、Day 5 小獎項。&lt;/li&gt;
+          &lt;li&gt;徐柏峯與助教確認每一天設計思考場域的觀察/訪談任務。&lt;/li&gt;
+          &lt;li&gt;確認各移動段交通方式、集合時間、上車/下車點與負責人。&lt;/li&gt;
+          &lt;li&gt;確認各晚住宿分流、房間名單與機動車支援方式。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;script&gt;
+    const buttons = Array.from(document.querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;));
+    const panels = Array.from(document.querySelectorAll(&#x27;[role=&quot;tabpanel&quot;]&#x27;));
+
+    function activate(tabId) {
+      buttons.forEach((button) =&gt; {
+        button.setAttribute(&#x27;aria-selected&#x27;, String(button.dataset.tab === tabId));
+      });
+      panels.forEach((panel) =&gt; {
+        panel.classList.toggle(&#x27;active&#x27;, panel.id === tabId);
+      });
+      window.location.hash = tabId;
+    }
+
+    buttons.forEach((button) =&gt; {
+      button.addEventListener(&#x27;click&#x27;, () =&gt; activate(button.dataset.tab));
+    });
+
+    const initial = window.location.hash.replace(&#x27;#&#x27;, &#x27;&#x27;);
+    if (initial &amp;&amp; document.getElementById(initial)) {
+      activate(initial);
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="五天工作人員分工總表"></iframe>
+      <div class="note">討論提醒：此區內容已內嵌在 index.html 中，不再依賴外部檔案。</div>
     </section>
 
     <section id="lodging" class="panel">
@@ -342,11 +1337,362 @@
           <h2>二、新版 34 人住宿分配</h2>
           <p>目前規則：學員集中於主要住宿點；星光/春風剩餘房間優先安排隊輔；阿聰自然田為 6 間雙人房；藏聚民宿作為第三晚補充住宿點。</p>
         </div>
-        <div class="source-actions">
-          <a href="lodging.html" target="_blank" rel="noopener">開啟住宿分配原檔</a>
-        </div>
       </div>
-      <iframe src="lodging.html" title="新版 34 人住宿分配"></iframe>
+      <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-Hant&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;泰拉學校｜住宿分配（新版 34 人）&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --ink: #20242a;
+      --muted: #667085;
+      --line: #d9dee7;
+      --bg: #fafafa;
+      --panel: #ffffff;
+      --head: #edf5f2;
+      --accent: #22685f;
+      --warn: #fff4e5;
+      --warn-line: #d37b2c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 980px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .summary div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 13px 14px;
+    }
+
+    .summary b {
+      display: block;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .summary span,
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main { padding: 24px 0 56px; }
+
+    section {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0 18px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--head);
+      color: #174942;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .note {
+      border-left: 5px solid var(--warn-line);
+      background: var(--warn);
+      padding: 12px 14px;
+      margin: 12px 0 16px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li { margin: 6px 0; }
+
+    @media (max-width: 900px) {
+      .summary { grid-template-columns: 1fr; }
+      table { display: block; overflow-x: auto; }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+      &lt;h1&gt;住宿分配（新版 34 人）&lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依新版名冊與目前規則重排：上杉老師單住；住宿以同性別為主；第一、二晚學生集中住星光碧后，第三晚學生集中住春風草堂；剩餘房間優先安排隊輔，吳孟龍可與男學生同住。阿聰自然田更新為 6 間雙人房。&lt;/p&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        &lt;div&gt;&lt;b&gt;Day 1&lt;/b&gt;&lt;span&gt;32 人住宿，2 人第二天加入&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 2&lt;/b&gt;&lt;span&gt;34 人住宿&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 3&lt;/b&gt;&lt;span&gt;34 人住宿，藏聚補位&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;Day 4&lt;/b&gt;&lt;span&gt;21 人佛光住宿&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class=&quot;wrap&quot;&gt;
+    &lt;section&gt;
+      &lt;h2&gt;容量與原則&lt;/h2&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;地點&lt;/th&gt;
+            &lt;th&gt;可用房型&lt;/th&gt;
+            &lt;th&gt;本次使用原則&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;星光碧后&lt;/td&gt;
+            &lt;td&gt;四人套房 2、小雙人 1、大雙人 1、五人套房 1、背包客房 8 床&lt;/td&gt;
+            &lt;td&gt;上杉老師需單住；第一、二晚學生集中安排於星光碧后，若星光仍有合適房型，導師、隊輔、助教與成人也可住星光。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;阿聰自然田&lt;/td&gt;
+            &lt;td&gt;雙人套房 6 間&lt;/td&gt;
+            &lt;td&gt;第一、二晚作為補充住宿點；星光剩餘房間優先安排隊輔，其餘人員安排阿聰雙人房。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;春風草堂&lt;/td&gt;
+            &lt;td&gt;30 人包棟：雙人房 3、四人房 3、六人房 2&lt;/td&gt;
+            &lt;td&gt;上杉老師單住後，實際可舒適容納約 29 人；住不下者移至藏聚民宿雙人房。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;藏聚民宿&lt;/td&gt;
+            &lt;td&gt;雙人房，數量待確認&lt;/td&gt;
+            &lt;td&gt;第三晚補位使用，建議至少保留 3 間雙人房。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;佛光大學&lt;/td&gt;
+            &lt;td&gt;兩人房&lt;/td&gt;
+            &lt;td&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 21 人住宿；建議 11 間，其中 1 間單住。&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note&quot;&gt;
+        &lt;strong&gt;容量提醒：&lt;/strong&gt;第一晚因 11 Yuzuki Igarashi、21 呂珈安第二天才加入，住宿人數為 32 人；第二晚與第三晚為 34 人。第一、二晚學生集中住星光碧后；第三晚學生集中住春風草堂。剩餘房間優先安排隊輔，吳孟龍可與男學生同住。
+      &lt;/div&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;夜別&lt;/th&gt;
+            &lt;th&gt;主要住宿點&lt;/th&gt;
+            &lt;th&gt;補充住宿點&lt;/th&gt;
+            &lt;th&gt;實際使用量&lt;/th&gt;
+            &lt;th&gt;重算結果&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Day 1&lt;/td&gt;
+            &lt;td&gt;星光碧后 25 人&lt;/td&gt;
+            &lt;td&gt;阿聰自然田 7 人&lt;/td&gt;
+            &lt;td&gt;阿聰使用 4 / 6 間雙人房&lt;/td&gt;
+            &lt;td&gt;阿聰尚可保留 2 間雙人房；苗怡凡已視為學員並安排於星光，星光剩餘床位優先安排隊輔。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Day 2&lt;/td&gt;
+            &lt;td&gt;星光碧后 25 人&lt;/td&gt;
+            &lt;td&gt;阿聰自然田 9 人&lt;/td&gt;
+            &lt;td&gt;阿聰使用 5 / 6 間雙人房&lt;/td&gt;
+            &lt;td&gt;阿聰尚可保留 1 間雙人房；第二天加入學生與苗怡凡安排於星光，盡量不更動第一晚學員房間。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Day 3&lt;/td&gt;
+            &lt;td&gt;春風草堂 29 人&lt;/td&gt;
+            &lt;td&gt;藏聚民宿 5 人&lt;/td&gt;
+            &lt;td&gt;藏聚使用 3 間雙人房&lt;/td&gt;
+            &lt;td&gt;苗怡凡已視為學員並安排於春風草堂；春風剩餘房間優先安排隊輔與助教。&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Day 1｜6/28 星光碧后 + 阿聰自然田&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 32 人住宿；11 Yuzuki Igarashi、21 呂珈安第二天才加入，Day 1 不住宿。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;住宿點&lt;/th&gt;
+            &lt;th&gt;房型&lt;/th&gt;
+            &lt;th&gt;入住名單&lt;/th&gt;
+            &lt;th&gt;備註&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;小雙人套房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生優先住八人房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;五人套房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実&lt;/td&gt;&lt;td&gt;日本女學生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;10 篠崎こころ、12 鄧靜脩、14 丁芯蕾、15 楊予喬&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;16 賴沭芸、18 蔡宜津、19 招姍姍、20 王品然&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;大雙人套房加床&lt;/td&gt;&lt;td&gt;25 林妙怡、26 陳思穎、27 苗怡凡&lt;/td&gt;&lt;td&gt;苗怡凡視為學員，安排於星光；林妙怡與陳思穎第一晚住星光碧后。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;延續賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：第一晚李樂昱與林秀芬移至阿聰同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Day 2｜6/29 星光碧后 + 阿聰自然田&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 34 人住宿；11 Yuzuki Igarashi、21 呂珈安加入。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;住宿點&lt;/th&gt;
+            &lt;th&gt;房型&lt;/th&gt;
+            &lt;th&gt;入住名單&lt;/th&gt;
+            &lt;th&gt;備註&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;小雙人套房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;背包客房 8 床&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞、17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生優先住八人房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;五人套房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実&lt;/td&gt;&lt;td&gt;日本女學生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;10 篠崎こころ、12 鄧靜脩、14 丁芯蕾、15 楊予喬&lt;/td&gt;&lt;td&gt;女生房；延續第一晚原房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;四人套房&lt;/td&gt;&lt;td&gt;16 賴沭芸、18 蔡宜津、19 招姍姍、20 王品然&lt;/td&gt;&lt;td&gt;女生房；延續第一晚原房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;星光碧后&lt;/td&gt;&lt;td&gt;大雙人套房加床&lt;/td&gt;&lt;td&gt;11 Yuzuki Igarashi、21 呂珈安、27 苗怡凡&lt;/td&gt;&lt;td&gt;第二天加入的學生與苗怡凡安排於星光。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;延續賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：林秀芬與李樂昱同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;25 林妙怡、26 陳思穎&lt;/td&gt;&lt;td&gt;女性助教同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;阿聰自然田&lt;/td&gt;&lt;td&gt;雙人套房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Day 3｜6/30 春風草堂 + 藏聚民宿&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;本晚 34 人住宿；春風草堂因上杉老師單住，建議藏聚民宿至少保留 3 間雙人房。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;住宿點&lt;/th&gt;
+            &lt;th&gt;房型&lt;/th&gt;
+            &lt;th&gt;入住名單&lt;/th&gt;
+            &lt;th&gt;備註&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;1 上杉勇司&lt;/td&gt;&lt;td&gt;日本老師單住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;2 INOUE SHO、3 田中天紹、4 河野秀哉、13 謝侑丞&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;17 刁元廷、22 鄭伯弘、23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生房；吳孟龍可與男學生同住。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;六人房&lt;/td&gt;&lt;td&gt;5 WURZ MEGUMI JOY、6 安齊純礼、7 星若奈、8 CUTTING SARAH ANNE、9 早川希実、10 篠崎こころ&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;六人房&lt;/td&gt;&lt;td&gt;11 Yuzuki Igarashi、12 鄧靜脩、14 丁芯蕾、15 楊予喬、16 賴沭芸、18 蔡宜津&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;四人房&lt;/td&gt;&lt;td&gt;19 招姍姍、20 王品然、21 呂珈安、27 苗怡凡&lt;/td&gt;&lt;td&gt;女生房；苗怡凡視為學員，安排於春風草堂。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;隊輔優先安排於春風。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;春風草堂&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;25 林妙怡、26 陳思穎&lt;/td&gt;&lt;td&gt;女性助教同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;延續賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;藏聚民宿&lt;/td&gt;&lt;td&gt;雙人房&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男性導師單住。&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Day 4｜7/1 佛光大學&lt;/h2&gt;
+      &lt;p class=&quot;muted&quot;&gt;7/1 日本學生、日本教授與兩位政大學生回台北後，剩 21 人住宿。佛光大學皆兩人房，建議 11 間，其中 1 間單住。&lt;/p&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;房間&lt;/th&gt;
+            &lt;th&gt;入住名單&lt;/th&gt;
+            &lt;th&gt;備註&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;女 1&lt;/td&gt;&lt;td&gt;14 丁芯蕾、15 楊予喬&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 2&lt;/td&gt;&lt;td&gt;16 賴沭芸、18 蔡宜津&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 3&lt;/td&gt;&lt;td&gt;19 招姍姍、20 王品然&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 4&lt;/td&gt;&lt;td&gt;21 呂珈安、25 林妙怡&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 5&lt;/td&gt;&lt;td&gt;24 賴郁雯、29 江宜汾&lt;/td&gt;&lt;td&gt;賴郁雯與江宜汾同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 6&lt;/td&gt;&lt;td&gt;26 陳思穎、27 苗怡凡&lt;/td&gt;&lt;td&gt;女生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 7&lt;/td&gt;&lt;td&gt;28 李樂昱、33 林秀芬&lt;/td&gt;&lt;td&gt;依需求調整：李樂昱與林秀芬同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;女 8&lt;/td&gt;&lt;td&gt;31 張沛勻、32 林宛儒&lt;/td&gt;&lt;td&gt;行政與隊輔同房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;男 1&lt;/td&gt;&lt;td&gt;17 刁元廷、22 鄭伯弘&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;男 2&lt;/td&gt;&lt;td&gt;23 林宸溥、34 吳孟龍&lt;/td&gt;&lt;td&gt;男生房。&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;男 3&lt;/td&gt;&lt;td&gt;30 徐柏峯&lt;/td&gt;&lt;td&gt;男生剩奇數，建議徐柏峯單住。&lt;/td&gt;&lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note&quot;&gt;
+        &lt;strong&gt;待確認：&lt;/strong&gt;佛光大學是否可提供 11 間兩人房；若只能提供 10 間，需討論是否接受一間三人或調整性別住宿原則。
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="新版 34 人住宿分配"></iframe>
     </section>
 
     <section id="groups" class="panel">
@@ -355,22 +1701,344 @@
           <h2>三、四組分組方案</h2>
           <p>供住宿與工作分工交叉檢查：每組配置助教與隊輔，並讓日本學生與政大兩位學生分散到四組。</p>
         </div>
-        <div class="source-actions">
-          <a href="groups.html" target="_blank" rel="noopener">開啟分組原檔</a>
-        </div>
       </div>
-      <iframe src="groups.html" title="四組分組結果"></iframe>
-    </section>
+      <iframe srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-Hant&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;泰拉學校｜分組結果（四組方案）&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --ink: #20242a;
+      --muted: #667085;
+      --line: #d9dee7;
+      --bg: #fafafa;
+      --panel: #ffffff;
+      --head: #edf5f2;
+      --accent: #22685f;
+      --warn: #fff4e5;
+      --warn-line: #d37b2c;
+    }
 
-    <section id="source" class="panel">
-      <h2>原檔連結</h2>
-      <p class="muted">若需要單獨投影或列印，可直接開啟各原始檔案。</p>
-      <div class="quick-grid">
-        <a href="staff.html" target="_blank" rel="noopener"><b>五天工作人員分工總表</b><span>每日工作分工與待辦</span></a>
-        <a href="lodging.html" target="_blank" rel="noopener"><b>住宿分配_新版34人</b><span>四晚房間與住宿點</span></a>
-        <a href="groups.html" target="_blank" rel="noopener"><b>分組結果_四組方案</b><span>四組名單與配置</span></a>
-        <a href="#toc"><b>回到目錄</b><span>返回本頁最上方</span></a>
-      </div>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, &quot;Noto Sans TC&quot;, &quot;PingFang TC&quot;, &quot;Microsoft JhengHei&quot;, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 980px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .summary div,
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 13px 14px;
+    }
+
+    .summary b {
+      display: block;
+      color: var(--accent);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .summary span,
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    main {
+      padding: 24px 0 56px;
+    }
+
+    section {
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0 18px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--head);
+      color: #174942;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .group-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card h3 {
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-left: 4px;
+      background: #f2f4f7;
+      color: #344054;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .note {
+      border-left: 5px solid var(--warn-line);
+      background: var(--warn);
+      padding: 12px 14px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .summary,
+      .group-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+      &lt;h1&gt;分組結果（四組方案）&lt;/h1&gt;
+      &lt;p class=&quot;subtitle&quot;&gt;依新版 34 人名冊重排。延續先前原則：日本教授不編組；賴郁雯、徐柏峯、江宜汾不加入分組；日本學生與兩位政大學生分散至四組；每組配置助教與隊輔。&lt;/p&gt;
+      &lt;div class=&quot;summary&quot;&gt;
+        &lt;div&gt;&lt;b&gt;34 人&lt;/b&gt;&lt;span&gt;新版名冊總人數&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;30 人&lt;/b&gt;&lt;span&gt;進入四組分組&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;4 人&lt;/b&gt;&lt;span&gt;不編入分組&lt;/span&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;b&gt;4 組&lt;/b&gt;&lt;span&gt;每組 7-8 人&lt;/span&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;main class=&quot;wrap&quot;&gt;
+    &lt;section&gt;
+      &lt;h2&gt;分組原則&lt;/h2&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;項目&lt;/th&gt;
+            &lt;th&gt;本次設定&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;不編入分組&lt;/td&gt;
+            &lt;td&gt;1 上杉勇司（日本教授）、24 賴郁雯、29 江宜汾、30 徐柏峯&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;第二天加入&lt;/td&gt;
+            &lt;td&gt;11 Yuzuki Igarashi、21 呂珈安；兩人已先放入組別，但 Day 1 晚間不在場時需註記。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;7/1 離開&lt;/td&gt;
+            &lt;td&gt;日本學生 2-11，以及政大學生 12 鄧靜脩、13 謝侑丞。&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;工作人員配置&lt;/td&gt;
+            &lt;td&gt;每組配置一位助教與一位隊輔；李樂昱與吳孟龍具跨角色，可同時作為該組助教/隊輔。&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;四組名單&lt;/h2&gt;
+      &lt;div class=&quot;group-grid&quot;&gt;
+        &lt;article class=&quot;card&quot;&gt;
+          &lt;h3&gt;A 組｜8 人&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot;&gt;助教：林妙怡｜隊輔：林宛儒&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;2 INOUE SHO &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;6 ANZAI SUMIRE 安齊純礼 &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;12 鄧靜脩 &lt;span class=&quot;tag&quot;&gt;台學政&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;14 丁芯蕾 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;17 刁元廷 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;25 林妙怡 &lt;span class=&quot;tag&quot;&gt;助教&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;31 張沛勻 &lt;span class=&quot;tag&quot;&gt;行政/導師&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;32 林宛儒 &lt;span class=&quot;tag&quot;&gt;隊輔&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;card&quot;&gt;
+          &lt;h3&gt;B 組｜8 人&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot;&gt;助教：陳思穎｜隊輔：林秀芬&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;3 TANAKA TENSHOW 田中天紹 &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;7 HOSHI WAKANA 星若奈 &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;8 CUTTING SARAH ANNE &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;15 楊予喬 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;19 招姍姍 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;22 鄭伯弘 &lt;span class=&quot;tag&quot;&gt;台學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;26 陳思穎 &lt;span class=&quot;tag&quot;&gt;助教&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;33 林秀芬 &lt;span class=&quot;tag&quot;&gt;隊輔&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;card&quot;&gt;
+          &lt;h3&gt;C 組｜7 人&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot;&gt;助教/隊輔：李樂昱&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;4 KAWANO SHUYA 河野秀哉 &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;9 HAYAKAWA NOZOMI 早川希実 &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;13 謝侑丞 &lt;span class=&quot;tag&quot;&gt;台學政&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;16 賴沭芸 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;20 王品然 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;27 苗怡凡 &lt;span class=&quot;tag&quot;&gt;台大&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;28 李樂昱 &lt;span class=&quot;tag&quot;&gt;導師&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;助教&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;隊輔&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/article&gt;
+
+        &lt;article class=&quot;card&quot;&gt;
+          &lt;h3&gt;D 組｜7 人&lt;/h3&gt;
+          &lt;p class=&quot;muted&quot;&gt;助教/隊輔：吳孟龍&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;5 WURZ MEGUMI JOY &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;10 SHINOZAKI KOKORO 篠崎こころ &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;11 Yuzuki Igarashi &lt;span class=&quot;tag&quot;&gt;日學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Day 2 加入&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;18 蔡宜津 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;21 呂珈安 &lt;span class=&quot;tag&quot;&gt;台學清&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;女&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Day 2 加入&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;23 林宸溥 &lt;span class=&quot;tag&quot;&gt;台學&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+            &lt;li&gt;34 吳孟龍 &lt;span class=&quot;tag&quot;&gt;助教&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;隊輔&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;男&lt;/span&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/article&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;7/1 後各組留下人員&lt;/h2&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;組別&lt;/th&gt;
+            &lt;th&gt;7/1 前離開&lt;/th&gt;
+            &lt;th&gt;7/1 後留下&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;A 組&lt;/td&gt;
+            &lt;td&gt;2、6、12&lt;/td&gt;
+            &lt;td&gt;14 丁芯蕾、17 刁元廷、25 林妙怡、31 張沛勻、32 林宛儒&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;B 組&lt;/td&gt;
+            &lt;td&gt;3、7、8&lt;/td&gt;
+            &lt;td&gt;15 楊予喬、19 招姍姍、22 鄭伯弘、26 陳思穎、33 林秀芬&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;C 組&lt;/td&gt;
+            &lt;td&gt;4、9、13&lt;/td&gt;
+            &lt;td&gt;16 賴沭芸、20 王品然、27 苗怡凡、28 李樂昱&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;D 組&lt;/td&gt;
+            &lt;td&gt;5、10、11&lt;/td&gt;
+            &lt;td&gt;18 蔡宜津、21 呂珈安、23 林宸溥、34 吳孟龍&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+      &lt;div class=&quot;note&quot;&gt;
+        &lt;strong&gt;提醒：&lt;/strong&gt;D 組 Day 1 會少 11 Yuzuki Igarashi 與 21 呂珈安，需由隊輔/助教在 Day 2 協助兩位快速銜接小組。
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="四組分組結果"></iframe>
     </section>
   </main>
 </body>

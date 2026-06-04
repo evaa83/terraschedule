@@ -1,0 +1,1044 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>泰拉學校五日活動｜工作人員分工總表</title>
+  <style>
+    :root {
+      --ink: #1f2933;
+      --muted: #667085;
+      --line: #d9dee7;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --head: #edf5f2;
+      --accent: #22685f;
+      --accent-dark: #174942;
+      --warn: #fff4e5;
+      --warn-line: #d37b2c;
+      --soft: #f2f4f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+      padding: 34px 0 24px;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.15;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 980px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .summary div {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #fbfdfc;
+    }
+
+    .summary b {
+      display: block;
+      color: var(--accent);
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .summary span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tabs {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      background: rgba(247, 248, 250, .96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+
+    .tabbar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    .tabbar button {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--panel);
+      color: var(--ink);
+      padding: 8px 13px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .tabbar button[aria-selected="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    main {
+      padding: 24px 0 56px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      font-size: 18px;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 10px 0 18px;
+    }
+
+    th,
+    td {
+      border-bottom: 1px solid var(--line);
+      padding: 9px 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--head);
+      color: var(--accent-dark);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .note {
+      border-left: 5px solid var(--accent);
+      background: #eff7f4;
+      padding: 12px 14px;
+      margin: 12px 0 16px;
+    }
+
+    .todo {
+      border-left-color: var(--warn-line);
+      background: var(--warn);
+    }
+
+    .checklist {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .checklist li {
+      margin: 7px 0;
+    }
+
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 12px 0 18px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 13px 14px;
+    }
+
+    .card strong {
+      display: block;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin: 0 3px 3px 0;
+      background: var(--soft);
+      color: #344054;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    @media print {
+      .tabs {
+        display: none;
+      }
+
+      section {
+        display: block;
+        page-break-after: always;
+      }
+
+      body {
+        background: #fff;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .summary,
+      .role-grid {
+        grid-template-columns: 1fr;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>五日活動工作人員分工總表</h1>
+      <p class="subtitle">依目前討論整理：隊輔負責安全、生活照顧、移動與現場流程；活動組負責破冰、團康與交流活動；導師負責教學或引導單元；助教跟著小組推進設計思考；張沛勻負責行政與財務。</p>
+      <div class="summary">
+        <div><b>隊輔</b><span>林宛儒、吳孟龍、林秀芬、李樂昱</span></div>
+        <div><b>活動組</b><span>林宛儒、林秀芬、吳孟龍</span></div>
+        <div><b>導師</b><span>徐柏峯、李樂昱、江宜汾</span></div>
+        <div><b>助教</b><span>陳思穎、林妙怡、吳孟龍、李樂昱</span></div>
+        <div><b>行政財務</b><span>張沛勻</span></div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <div class="wrap tabbar" role="tablist" aria-label="五天行程切換">
+      <button type="button" role="tab" aria-selected="true" aria-controls="day1" data-tab="day1">Day 1｜6/28</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="day2" data-tab="day2">Day 2｜6/29</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="day3" data-tab="day3">Day 3｜6/30</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="day4" data-tab="day4">Day 4｜7/1</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="day5" data-tab="day5">Day 5｜7/2</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="prep" data-tab="prep">交通/行前</button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="common" data-tab="common">共通規則</button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="day1" class="active" role="tabpanel">
+      <h2>Day 1｜6/28 Sun</h2>
+      <p class="muted">主軸：報到、論壇、分組公布、移動破冰、open space 與題目選定。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>行程</th>
+            <th>隊輔</th>
+            <th>活動組</th>
+            <th>導師</th>
+            <th>助教</th>
+            <th>行政 / 財務</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>早餐、上午</td>
+            <td>未安排正式活動</td>
+            <td>暫無主要任務</td>
+            <td>暫無主要任務</td>
+            <td>論壇前準備或確認流程</td>
+            <td>暫無主要任務</td>
+            <td>準備報到、文件、簽到表、勞報單、拍攝同意資料</td>
+          </tr>
+          <tr>
+            <td>12:00-13:20</td>
+            <td>報到、中餐</td>
+            <td>報到動線、接待、發餐具/紀念品/餐盒、行李放置、現場秩序、提醒學生與老師完成當日簽到</td>
+            <td>可協助暖場與等待氣氛</td>
+            <td>準備論壇相關內容</td>
+            <td>現場支援</td>
+            <td>張沛勻準備並管理簽到表、個資/拍攝同意、勞報單等文件</td>
+          </tr>
+          <tr>
+            <td>13:30-17:00</td>
+            <td>台日青年永續論壇</td>
+            <td>維持秩序、照顧學員需求、協助拍照記錄；留意學員是否理解分組與後續流程</td>
+            <td>可協助論壇前後暖場</td>
+            <td>徐柏峯介紹未來幾天工作方式、小組工作方式、隊輔與助教角色，並公布分組名單；其他導師依論壇安排發言</td>
+            <td>確認自己小組與成員，準備後續帶組</td>
+            <td>張沛勻找講者/來賓簽勞報單、確認戶籍地址、收交通票據、處理個資與拍攝同意</td>
+          </tr>
+          <tr>
+            <td>論壇後、晚餐前</td>
+            <td>晚餐與上車準備</td>
+            <td>引導上車、協助發餐盒；確認學生與老師當日已完成一次簽到即可</td>
+            <td>協助現場秩序與等待</td>
+            <td>論壇收尾</td>
+            <td>現場支援</td>
+            <td>確認講者行政文件、勞報單與交通單據完成</td>
+          </tr>
+          <tr>
+            <td>17:30-18:30</td>
+            <td>餐盒；移動到南澳</td>
+            <td>點名、引導上遊覽車、發餐盒、提醒餐具與垃圾處理</td>
+            <td>設計車上活動，讓同組成員彼此認識、破冰、熟悉</td>
+            <td>可支援車上說明</td>
+            <td>觀察自己小組狀態</td>
+            <td>確認交通與行政資料帶齊</td>
+          </tr>
+          <tr>
+            <td>抵達星光碧后</td>
+            <td>入住前整理</td>
+            <td>下車點名、房間分配、帶大家放行李、確認室友與房號</td>
+            <td>協助等待秩序</td>
+            <td>可協助住宿說明</td>
+            <td>協助組員安頓</td>
+            <td>確認住宿名單</td>
+          </tr>
+          <tr>
+            <td>19:00-21:00</td>
+            <td>破冰與 open space；題目選定</td>
+            <td>集合、秩序、安全、人數確認</td>
+            <td>必要時補充破冰或小組暖身</td>
+            <td>徐柏峯主帶 open space 與題目選定</td>
+            <td>協助各組理解任務、陪伴討論、收斂題目</td>
+            <td>協助紀錄各組題目結果</td>
+          </tr>
+          <tr>
+            <td>晚間結束後</td>
+            <td>就寢引導</td>
+            <td>確認房間、室友、隔日集合時間；確認人數與安全狀態</td>
+            <td>協助收尾</td>
+            <td>無主要任務</td>
+            <td>確認小組狀態</td>
+            <td>確認隔日行政需求</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note todo">
+        <strong>Day 1 待辦 / 待確認</strong>
+        <ul class="checklist">
+          <li>論壇講者/來賓名單、個資與拍攝同意流程已確定。</li>
+          <li>勞報單與交通單據由張沛勻協助處理與確認。</li>
+          <li>學生與老師五天每日都需簽到一次，時間不限；簽到表供講師費與餐費核銷使用，不需要簽退。</li>
+          <li>確認徐柏峯公布分組與角色介紹的簡報內容。</li>
+          <li>活動組設計車上同組破冰活動。</li>
+          <li>6/28 遊覽車 17:30 自台北政大出發至南澳星光碧后，費用 12000 元含稅，世點旅行社黃麗娟負責。</li>
+          <li>確認抵達星光碧后後的房間分配說明流程。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="day2" role="tabpanel">
+      <h2>Day 2｜6/29 Mon</h2>
+      <p class="muted">主軸：原生園靜坐、阿聰自然田體驗、原民文化餐、AI 桌上研究、跨文化之夜。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>行程</th>
+            <th>隊輔</th>
+            <th>活動組</th>
+            <th>導師</th>
+            <th>助教</th>
+            <th>行政 / 財務</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>起床後</td>
+            <td>早晨整隊、每日簽到</td>
+            <td>提醒起床、集合、點名；提醒水壺裝滿、餐盒餐具；雨衣地墊由主辦方準備，同學不用自帶</td>
+            <td>協助集合氣氛</td>
+            <td>無主要任務</td>
+            <td>確認自己小組狀態</td>
+            <td>張沛勻確認當日行政資料；學生與老師每日簽到，供講師費與餐費核銷使用</td>
+          </tr>
+          <tr>
+            <td>早餐</td>
+            <td>在地早餐店或送餐</td>
+            <td>確認每位學員有早餐；協助分發、排隊、用餐秩序、餐具清洗</td>
+            <td>協助秩序</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>張沛勻支付早餐費用，取得收據/單據</td>
+          </tr>
+          <tr>
+            <td>約 08:10</td>
+            <td>星光碧后步行前往原生園</td>
+            <td>點名；確認水壺、餐盒餐具；隊伍前後照看避免掉隊；雨衣地墊由主辦方準備</td>
+            <td>協助移動秩序</td>
+            <td>李樂昱準備帶靜坐</td>
+            <td>跟著組員移動</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>08:30-09:30</td>
+            <td>原生園靜坐</td>
+            <td>確認人數到齊、安靜入座</td>
+            <td>協助安定現場</td>
+            <td>李樂昱帶靜坐、五感覺察</td>
+            <td>陪同小組參與</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>09:30-12:00</td>
+            <td>阿聰自然田：白甘蔗採收榨汁、鋸竹子手作午餐的碗、秀明農法介紹</td>
+            <td>移動安全、補水、安全提醒、照顧身體狀態</td>
+            <td>協助轉場與秩序</td>
+            <td>徐柏峯提醒不只是體驗，也要觀察與訪談</td>
+            <td>陪各組把體驗轉成觀察、提問、紀錄、照片/錄音/錄影</td>
+            <td>若離開前需結算，張沛勻處理付款與收據</td>
+          </tr>
+          <tr>
+            <td>12:00-13:20</td>
+            <td>原住民文化認識與部落餐</td>
+            <td>協調座位、餐食分配、用餐秩序；提醒餐盒使用、清洗、廚餘處理</td>
+            <td>協助用餐氣氛</td>
+            <td>可補充文化觀察方向</td>
+            <td>提醒食農、文化、餐食、服飾、織品等觀察與訪談素材</td>
+            <td>視情況處理餐費、收據、單據</td>
+          </tr>
+          <tr>
+            <td>13:30-17:00</td>
+            <td>AI 應用市場理解：桌上研究、線上資料收集（阿聰協助嘗試借用原生園會議室）</td>
+            <td>維持課程秩序、時間提醒、休息提醒</td>
+            <td>無主要任務</td>
+            <td>徐柏峯教大家依題目進行資料收集</td>
+            <td>跟各組協助資料收集、整理問題、形成後續訪談方向</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>17:30-18:30</td>
+            <td>晚餐餐盒，供應方式待確認</td>
+            <td>取餐/發餐、用餐秩序、餐盒餐具清洗</td>
+            <td>銜接晚間活動氣氛</td>
+            <td>無主要任務</td>
+            <td>觀察小組狀態</td>
+            <td>視情況處理餐費與單據</td>
+          </tr>
+          <tr>
+            <td>19:00-21:00</td>
+            <td>跨文化之夜</td>
+            <td>集合、秩序、安全、人數掌握</td>
+            <td>主責設計台日交流活動，促進台灣學生與日本學生互動</td>
+            <td>可參與或支援交流</td>
+            <td>觀察小組互動與跨文化溝通</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>晚間結束後</td>
+            <td>就寢引導</td>
+            <td>確認回房、隔日集合時間、攜帶物品與安全狀態</td>
+            <td>活動收尾</td>
+            <td>無主要任務</td>
+            <td>確認小組狀態</td>
+            <td>確認隔日行政需求；不需簽退</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note todo">
+        <strong>Day 2 待辦 / 待確認</strong>
+        <ul class="checklist">
+          <li>確認早餐是隊輔取餐，或早餐店送餐。</li>
+          <li>原生園靜坐調整為 08:30-09:30，共一小時。</li>
+          <li>阿聰自然田調整為 09:30 開始，上午先做白甘蔗採收，再鋸竹子手作午餐的碗。</li>
+          <li>阿聰協助嘗試借用原生園會議室，作為下午 AI 桌上研究與資料整理空間。</li>
+          <li>晚餐供應方式由阿聰協助詢問，仍待確認。</li>
+          <li>雨衣地墊由主辦方準備，同學不用自帶。</li>
+          <li>徐柏峯事前準備阿聰自然田與原民文化餐的觀察/訪談提醒。</li>
+          <li>活動組設計跨文化之夜內容。</li>
+          <li>學生與老師每日簽到一次即可，時間不限，不需要簽退。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="day3" role="tabpanel">
+      <h2>Day 3｜6/30 Tue</h2>
+      <p class="muted">主軸：水月農莊、農村饗宴、慢島生活訪談與體驗、晚間素材整理與放鬆活動。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>行程</th>
+            <th>隊輔</th>
+            <th>活動組</th>
+            <th>導師</th>
+            <th>助教</th>
+            <th>行政 / 財務</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>起床、早餐、靜坐</td>
+            <td>比照 Day 2</td>
+            <td>集合、點名、早餐、補水與物品提醒</td>
+            <td>協助集合氣氛</td>
+            <td>李樂昱可帶靜坐/五感覺察</td>
+            <td>確認小組狀態</td>
+            <td>張沛勻處理早餐費用與單據；確認學生與老師完成每日簽到</td>
+          </tr>
+          <tr>
+            <td>早餐後</td>
+            <td>搭遊覽車前往水月農莊</td>
+            <td>呼叫集合、點名、提醒水壺/餐具/隨身物品、全員上車</td>
+            <td>設計車上放鬆交流活動</td>
+            <td>無主要任務</td>
+            <td>跟著各組移動</td>
+            <td>張沛勻聯繫遊覽車，確認抵達時間與地點；費用單據待確認</td>
+          </tr>
+          <tr>
+            <td>上午</td>
+            <td>水月農莊：採蓮或採黑豆、五色稻田介紹</td>
+            <td>下車集合、移動安全、補水、防曬、身體狀態</td>
+            <td>協助轉場與秩序</td>
+            <td>徐柏峯提醒這是設計思考場域，需觀察與訪談</td>
+            <td>提醒拍照、錄音/錄影、筆記、提問；協助各組蒐集素材</td>
+            <td>若離開前需結算，張沛勻付款並取得收據</td>
+          </tr>
+          <tr>
+            <td>12:00-13:20</td>
+            <td>農村饗宴：包飯糰與蓮子湯</td>
+            <td>餐食分配、用餐秩序、餐具清洗、廚餘處理</td>
+            <td>協助用餐氣氛</td>
+            <td>可補充食農/農村文化觀察方向</td>
+            <td>提醒記錄體驗、訪談與觀察</td>
+            <td>若需支付餐費或體驗費，處理單據</td>
+          </tr>
+          <tr>
+            <td>13:30</td>
+            <td>搭遊覽車移動到員山 / 慢島生活</td>
+            <td>點名、上車、物品確認</td>
+            <td>安排簡短放鬆、交流或回顧活動</td>
+            <td>無主要任務</td>
+            <td>協助各組整理上午觀察</td>
+            <td>遊覽車費用支付時間待確認</td>
+          </tr>
+          <tr>
+            <td>15:00-18:00</td>
+            <td>慢島生活：Leica 訪談、水稻踏查、稻草編織</td>
+            <td>現場秩序、戶外安全、補水、材料與活動安全</td>
+            <td>協助活動轉場</td>
+            <td>徐柏峯提醒訪談目的、觀察重點與素材蒐集</td>
+            <td>協助各組提問、紀錄、拍照、錄音/錄影；整理農人、有機商店、餐廳、創作者等素材</td>
+            <td>若有講師費、場地費或體驗費，張沛勻處理單據</td>
+          </tr>
+          <tr>
+            <td>晚餐後</td>
+            <td>步行回春風草堂</td>
+            <td>點名、確認安全步行回民宿、避免掉隊</td>
+            <td>協助隊伍氣氛</td>
+            <td>無主要任務</td>
+            <td>跟著小組移動</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>抵達春風草堂</td>
+            <td>房間分配、放行李</td>
+            <td>說明房間、室友、盥洗與集合時間；確認每人知道住哪裡</td>
+            <td>協助等待秩序</td>
+            <td>無主要任務</td>
+            <td>協助組員安頓</td>
+            <td>確認住宿與需移動到其他住宿點名單</td>
+          </tr>
+          <tr>
+            <td>19:00-21:00</td>
+            <td>訪談與晚會</td>
+            <td>維持秩序、安全、人數；協助活動轉換</td>
+            <td>設計放鬆活動，讓下午嚴肅工作後有緩衝</td>
+            <td>徐柏峯帶設計思考整理：彙整 Day 1-Day 3 素材</td>
+            <td>帶各組整理訪談紀錄、照片影片、觀察筆記與初步歸納</td>
+            <td>可協助記錄各組進度</td>
+          </tr>
+          <tr>
+            <td>夜間</td>
+            <td>就寢與住宿移動</td>
+            <td>確認回房、就寢安全、隔日集合；協助春風草堂住不下者移動至藏聚民宿</td>
+            <td>無主要任務</td>
+            <td>可協助確認藏聚民宿住宿移動方式</td>
+            <td>無主要任務</td>
+            <td>確認春風草堂與藏聚民宿住宿名單及必要車輛安排</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note todo">
+        <strong>Day 3 待辦 / 待確認</strong>
+        <ul class="checklist">
+          <li>確認遊覽車抵達星光碧后的時間與地點。</li>
+          <li>6/30 遊覽車約 08:00，自南澳星光碧后至員山慢島生活，費用 9000 元含稅，世點旅行社負責。</li>
+          <li>確認水月農莊、慢島生活、餐廳等是否當日現場結算。</li>
+          <li>可請水月農莊莊主張明麗事先協助聯繫不在場受訪者，安排電話/線上訪談。</li>
+          <li>確認晚間採「活動組放鬆活動 + 徐柏峯/助教素材整理」交錯進行。</li>
+          <li>第三晚春風草堂住不下者，安排至附近藏聚民宿住宿；晚餐與住宿細節需持續確認。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="day4" role="tabpanel">
+      <h2>Day 4｜7/1 Wed</h2>
+      <p class="muted">主軸：生態調查、蔬食與食農訪談、米烘焙體驗、移動到佛光大學、洞察與解決方案生成。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>行程</th>
+            <th>隊輔</th>
+            <th>活動組</th>
+            <th>導師</th>
+            <th>助教</th>
+            <th>行政 / 財務</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>早餐、課程前</td>
+            <td>民宿中式早餐、靜坐</td>
+            <td>用餐秩序、確認早餐、提醒水壺裝滿、防曬、防中暑</td>
+            <td>無主要任務</td>
+            <td>李樂昱帶靜坐/五感覺察</td>
+            <td>確認小組狀態</td>
+            <td>若早餐需結算，張沛勻處理單據</td>
+          </tr>
+          <tr>
+            <td>08:30-10:00</td>
+            <td>深溝調魚大賽團隊｜生態調查、示範與操作</td>
+            <td>戶外安全、補水、防曬、防中暑、隊伍跟上</td>
+            <td>無主要任務</td>
+            <td>徐柏峯提醒這是設計思考場域</td>
+            <td>提醒拍照、錄音/錄影、筆記、提問與紀錄</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>10:00-10:15</td>
+            <td>點心時間</td>
+            <td>點心分配、秩序、人數確認、補水</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>可協助小組補充紀錄</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>10:15-11:30</td>
+            <td>講座+訪談【半農 X 生態學家】</td>
+            <td>現場秩序、補水提醒</td>
+            <td>無主要任務</td>
+            <td>徐柏峯協助聚焦訪談目的</td>
+            <td>協助各組提問、紀錄、整理受訪內容</td>
+            <td>若有講師費或場地費，處理單據</td>
+          </tr>
+          <tr>
+            <td>11:45</td>
+            <td>步行至一簞食</td>
+            <td>集合、點名、步行安全，確認全員抵達員山鄉尚深路 122 號</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>跟各組移動</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>11:45-13:45</td>
+            <td>蔬食午餐與訪談：陳幸延、賴青松</td>
+            <td>用餐座位、餐食秩序、補水、人數確認</td>
+            <td>無主要任務</td>
+            <td>徐柏峯協助聚焦訪談問題</td>
+            <td>協助各組把蔬食體驗與訪談轉成素材</td>
+            <td>視情況處理餐費、講師費、單據</td>
+          </tr>
+          <tr>
+            <td>14:00-16:30</td>
+            <td>桑葚米烘焙：講座+訪談、米食體驗、訪談整理</td>
+            <td>秩序、材料領取、活動安全、時間提醒</td>
+            <td>無主要任務</td>
+            <td>徐柏峯帶方法提醒：整理訪談與觀察素材</td>
+            <td>帶各組訪談、紀錄、整理、收斂重點</td>
+            <td>若有講師/體驗費，處理單據</td>
+          </tr>
+          <tr>
+            <td>16:30 後</td>
+            <td>全員搭遊覽車到佛光大學；日籍學生、日本教授、兩位政大學生原車回台北</td>
+            <td>集合、點名、行李上車；說明誰下車住宿、誰原車回台北</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>協助組員理解移動安排</td>
+            <td>確認交通安排與名單</td>
+          </tr>
+          <tr>
+            <td>抵達佛光大學</td>
+            <td>入住分流、放行李</td>
+            <td>住宿人員下車、拿行李、確認房號與室友；返台人員原車回台北，車上不另安排負責人，由返台人員自行前往</td>
+            <td>無主要任務</td>
+            <td>可協助現場說明</td>
+            <td>協助小組成員安頓</td>
+            <td>確認住宿名單與返程名單</td>
+          </tr>
+          <tr>
+            <td>17:30-18:30</td>
+            <td>晚餐：分組討論與分享</td>
+            <td>用餐秩序、人數確認</td>
+            <td>不需設計活動</td>
+            <td>徐柏峯引導各組分享洞察 / insight</td>
+            <td>協助各組用 AI 整理原始資料，歸納洞察</td>
+            <td>若餐費需處理，確認單據</td>
+          </tr>
+          <tr>
+            <td>19:00-21:00</td>
+            <td>成果生成與迭代</td>
+            <td>現場秩序、時間提醒、學員需求</td>
+            <td>不需設計活動</td>
+            <td>徐柏峯主帶雙鑽石第二鑽石：從洞察發展解決方案、包裝與驗證點子</td>
+            <td>跟各組推進解方討論、AI 輔助整理與迭代</td>
+            <td>可協助記錄各組成果進度</td>
+          </tr>
+          <tr>
+            <td>晚間結束後</td>
+            <td>佛光大學住宿</td>
+            <td>確認房間、室友、隔日集合時間與就寢安全</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>確認各組狀態</td>
+            <td>確認隔日行政需求</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note todo">
+        <strong>Day 4 待辦 / 待確認</strong>
+        <ul class="checklist">
+          <li>學生與老師每日簽到一次即可，時間不限，不需要簽退。</li>
+          <li>確認佛光大學抵達後房間分配與入住流程。</li>
+          <li>日本學生、日本教授、兩位政大學生回台北車上不另安排負責人，由返台人員自行前往。</li>
+          <li>7/1 遊覽車 16:30 自慢島生活至佛光大學；17:30 佛光大學至台北車站，費用 12000 元含稅，世點旅行社負責。</li>
+          <li>確認各訪談/體驗單位是否需當天支付費用與取得單據。</li>
+        </ul>
+      </div>
+      <div class="note">
+        <strong>Day 4 其餘注意事項</strong>
+        <ul class="checklist">
+          <li>張沛勻在行前通知信提醒水壺、盥洗用具、備用藥品、防曬用品、戶外鞋衣。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="day5" role="tabpanel">
+      <h2>Day 5｜7/2 Thu</h2>
+      <p class="muted">主軸：佛光大學早餐、植樹活動、最後修整、成果發表、結業典禮、遊覽車返台北。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>時間</th>
+            <th>行程</th>
+            <th>隊輔</th>
+            <th>活動組</th>
+            <th>導師</th>
+            <th>助教</th>
+            <th>行政 / 財務</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>起床後</td>
+            <td>整理行李、退房準備</td>
+            <td>確認起床、行李、個人物品、集合時間</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>確認小組狀態</td>
+            <td>張沛勻確認退房與行政資料</td>
+          </tr>
+          <tr>
+            <td>早餐</td>
+            <td>佛光大學住宿附早餐 / 滴水坊</td>
+            <td>引導學員到餐廳、點名、用餐秩序</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>若需單據，張沛勻確認</td>
+          </tr>
+          <tr>
+            <td>早餐後</td>
+            <td>移動到植樹場域</td>
+            <td>集合、點名、引導移動、安全抵達</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>協助小組移動</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>08:30-12:00</td>
+            <td>種樹活動：傳承與承諾</td>
+            <td>秩序、安全、補水、防曬</td>
+            <td>協助活動氣氛</td>
+            <td>植樹活動細節待與周紅騰教授確認；若有空檔，李樂昱帶最後一次覺察/五感體驗</td>
+            <td>協助小組參與與記錄</td>
+            <td>張沛勻確認場地、貴賓或行政需求</td>
+          </tr>
+          <tr>
+            <td>上午若有時間</td>
+            <td>成果發表最後修整</td>
+            <td>秩序、時間提醒</td>
+            <td>無主要任務</td>
+            <td>徐柏峯帶各組確認發表細節、最後修正</td>
+            <td>協助各組整理簡報、講稿、分工、Pitch 重點</td>
+            <td>無主要任務</td>
+          </tr>
+          <tr>
+            <td>12:00-13:20</td>
+            <td>佛光大學滴水坊午餐</td>
+            <td>引導用餐、點名、提醒下午集合</td>
+            <td>協助氣氛</td>
+            <td>無主要任務</td>
+            <td>協助小組掌握下午發表準備</td>
+            <td>確認餐費或單據</td>
+          </tr>
+          <tr>
+            <td>13:30-17:00</td>
+            <td>成果發表、專家講評、結業典禮</td>
+            <td>現場秩序、引導進出場、時間提醒</td>
+            <td>協助結業典禮氣氛、小獎項頒發、友誼活動</td>
+            <td>徐柏峯主責成果發表流程；受邀老師參與講評</td>
+            <td>協助各組發表前準備、上台順序、資料確認</td>
+            <td>張沛勻協助來賓接待、直播行政、結業證書與文件</td>
+          </tr>
+          <tr>
+            <td>成果發表期間</td>
+            <td>現場與線上直播</td>
+            <td>維持秩序，避免干擾直播</td>
+            <td>協助主持感與頒獎橋段</td>
+            <td>老師們講評</td>
+            <td>支援小組發表與現場問題</td>
+            <td>協助直播行政、來賓名單、文件與證書</td>
+          </tr>
+          <tr>
+            <td>約 17:00</td>
+            <td>遊覽車回台北</td>
+            <td>確認所有人與行李上車、點名、下車點確認</td>
+            <td>可安排簡短車上收尾</td>
+            <td>無主要任務</td>
+            <td>無主要任務</td>
+            <td>張沛勻確認遊覽車時間、返程路線與單據</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="note todo">
+        <strong>Day 5 待辦 / 待確認</strong>
+        <ul class="checklist">
+          <li>植樹活動需與周紅騰教授確認所需物品與流程。</li>
+          <li>確認上午是否安排李樂昱最後一次覺察與五感體驗。</li>
+          <li>確認成果發表邀請哪些老師現場講評。</li>
+          <li>確認直播設備、連線、收音、網址與測試負責人。</li>
+          <li>張沛勻需出隊前印製完成結業證書。</li>
+          <li>活動組發想小獎項，例如最有創意獎、最活潑獎等。</li>
+          <li>確認回台北下車點：除台北車站外是否需要其他停靠點。</li>
+          <li>7/2 遊覽車 17:30 自佛光大學回台北，費用 6500 元未稅，一乙安達小客車，當場付現或結束七天內匯款。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="prep" role="tabpanel">
+      <h2>交通與行前準備</h2>
+      <p class="muted">資料來源：遊覽車.docx，以及前面工作分工討論。此頁供張沛勻、隊輔與活動組確認交通、付款單據與行前通知內容。</p>
+
+      <h3>遊覽車資訊</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>行程</th>
+            <th>時間</th>
+            <th>費用</th>
+            <th>負責公司 / 聯絡</th>
+            <th>工作提醒</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>6/28</td>
+            <td>台北政大 → 南澳星光碧后</td>
+            <td>17:30</td>
+            <td>12000 元，含稅</td>
+            <td>世點旅行社；黃麗娟 0925-257-575；佛光周老師介紹</td>
+            <td>隊輔點名上車、發餐盒；活動組設計車上破冰；張沛勻確認單據。</td>
+          </tr>
+          <tr>
+            <td>6/30</td>
+            <td>南澳星光碧后 → 員山慢島生活</td>
+            <td>約 08:00</td>
+            <td>9000 元，含稅</td>
+            <td>世點旅行社</td>
+            <td>張沛勻確認抵達時間與地點；隊輔集合點名；活動組安排車上放鬆交流。</td>
+          </tr>
+          <tr>
+            <td>7/1</td>
+            <td>員山慢島生活 → 佛光大學；佛光大學 → 台北車站</td>
+            <td>16:30；17:30</td>
+            <td>12000 元，含稅</td>
+            <td>世點旅行社</td>
+            <td>全員先到佛光大學；住宿者下車；日本學生、日本教授與兩位政大學生原車回台北，車上不另安排負責人。</td>
+          </tr>
+          <tr>
+            <td>7/2</td>
+            <td>佛光大學 → 台北</td>
+            <td>17:30</td>
+            <td>6500 元，未稅</td>
+            <td>一乙安達小客車</td>
+            <td>當場付現或結束七天內匯款皆可；需確認除台北車站外是否有其他下車點。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>行前通知需提醒學員攜帶</h3>
+      <div class="note">
+        <ul class="checklist">
+          <li>水壺：戶外與農場行程多，每天出發前需裝滿水，預防中暑。</li>
+          <li>盥洗用具：民宿不提供，需自備牙刷、牙膏、毛巾、洗沐用品等。</li>
+          <li>備用藥品：個人常用藥、暈車藥、過敏藥、防蚊用品等。</li>
+          <li>防曬與戶外用品：帽子、防曬乳、薄外套、適合走路的鞋。</li>
+          <li>餐具使用提醒：活動會使用不鏽鋼餐盒，隊輔會提醒每餐使用與清洗。</li>
+          <li>雨衣地墊：由主辦方準備，同學不用自帶。</li>
+        </ul>
+      </div>
+
+      <h3>交通與行政待辦</h3>
+      <div class="note todo">
+        <ul class="checklist">
+          <li>張沛勻確認每一段遊覽車的發車地點、抵達地點、司機/公司聯絡方式。</li>
+          <li>張沛勻確認 6/28、6/30、7/1、7/2 的付款方式、發票或收據格式。</li>
+          <li>隊輔建立每段上車/下車點名流程，尤其 7/1 佛光大學分流。</li>
+          <li>活動組準備 6/28、6/30、7/1 車上活動或放鬆交流活動；7/2 可準備簡短收尾。</li>
+          <li>確認 7/2 回台北是否只停台北車站，或另有其他下車點。</li>
+          <li>行前通知信由張沛勻統一寄出，內容需包含攜帶物品、集合資訊、住宿提醒、交通資訊。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="common" role="tabpanel">
+      <h2>共通角色規則</h2>
+      <div class="role-grid">
+        <div class="card">
+          <strong>隊輔</strong>
+          <p><span class="tag">林宛儒</span><span class="tag">吳孟龍</span><span class="tag">林秀芬</span><span class="tag">李樂昱</span></p>
+          <p>每組安全照顧者與流程守門人。負責點名、移動、吃住行、補水、防中暑、集合提醒、住宿收尾、學員需求與第一線狀態觀察。</p>
+        </div>
+        <div class="card">
+          <strong>活動組</strong>
+          <p>由 <span class="tag">林宛儒</span><span class="tag">林秀芬</span><span class="tag">吳孟龍</span> 負責。主責破冰、團康、車上互動、跨文化之夜、晚會放鬆與結業典禮小獎項。</p>
+        </div>
+        <div class="card">
+          <strong>導師</strong>
+          <p><span class="tag">徐柏峯</span><span class="tag">李樂昱</span><span class="tag">江宜汾</span></p>
+          <p>負責教學、引導或專業單元。李樂昱負責靜坐、五感覺察等活動；徐柏峯負責設計思考方法、題目選定、素材整理、成果生成與迭代。</p>
+        </div>
+        <div class="card">
+          <strong>助教</strong>
+          <p><span class="tag">陳思穎</span><span class="tag">林妙怡</span><span class="tag">吳孟龍</span><span class="tag">李樂昱</span></p>
+          <p>跟著小組推進設計思考案子。所有設計思考場域都要提醒觀察、訪談、拍照、錄音/錄影、筆記、整理與收斂。</p>
+        </div>
+        <div class="card">
+          <strong>行政 / 財務</strong>
+          <p>張沛勻一人負責行政與財務：每日簽到表、付款、收據、單據、勞報單、交通票據、行前通知、證書、名單與必要文件。</p>
+        </div>
+        <div class="card">
+          <strong>設計思考場域</strong>
+          <p>農場、職人介紹、體驗、餐食、訪談、講座與素材整理，只要能產生觀察/訪談資料，都視為設計思考場域。</p>
+        </div>
+      </div>
+      <h3>五天共通待辦</h3>
+      <div class="note todo">
+        <ul class="checklist">
+          <li>學生與老師五天都要簽到，每日一次即可，時間不限；簽到表會用於講師費與餐費核銷，不需要簽退。</li>
+          <li>張沛勻整理所有需付款、收據、單據、講師勞報單、交通票據的清單。</li>
+          <li>張沛勻確認遊覽車付款方式、含稅/未稅、發票或收據，以及司機/公司聯絡資訊。</li>
+          <li>行前通知信需提醒水壺、盥洗用具、備用藥品、防曬用品、適合戶外移動的鞋衣、餐具使用方式。</li>
+          <li>活動組準備車上活動、跨文化之夜、Day 3 晚會放鬆活動、Day 5 小獎項。</li>
+          <li>徐柏峯與助教確認每一天設計思考場域的觀察/訪談任務。</li>
+          <li>確認各移動段交通方式、集合時間、上車/下車點與負責人。</li>
+          <li>確認各晚住宿分流、房間名單與機動車支援方式。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = Array.from(document.querySelectorAll('[role="tab"]'));
+    const panels = Array.from(document.querySelectorAll('[role="tabpanel"]'));
+
+    function activate(tabId) {
+      buttons.forEach((button) => {
+        button.setAttribute('aria-selected', String(button.dataset.tab === tabId));
+      });
+      panels.forEach((panel) => {
+        panel.classList.toggle('active', panel.id === tabId);
+      });
+      window.location.hash = tabId;
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => activate(button.dataset.tab));
+    });
+
+    const initial = window.location.hash.replace('#', '');
+    if (initial && document.getElementById(initial)) {
+      activate(initial);
+    }
+  </script>
+</body>
+</html>
